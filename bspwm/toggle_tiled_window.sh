@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [[ -n $(bspc query -N -n $(bspc query -N -n).floating) ]];then
+    bspc node -f last.local.tiled.!hidden.!locked
+    exit
+fi
+
+bspc node -f next.local.!hidden.window.!floating.!locked
