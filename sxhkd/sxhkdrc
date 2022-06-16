@@ -1,1 +1,266 @@
-/home/perplex/.config/sxhkd/sxhkdrc
+
+# terminal emulator
+super + Return
+	st
+
+super + alt + Return
+        st -t stfloat
+
+# program launcher
+super + @space
+	rofi -show run
+
+# launch ranger
+super + d
+	st ranger
+
+# decrease and increase gap window
+#########################################
+
+super + minus 
+        ~/dotfiles/bspwm/toggle_border_width.sh gap dec
+
+super + equal
+        ~/dotfiles/bspwm/toggle_border_width.sh gap inc
+#########################################
+
+# set border_width = 1 for a single window or globally
+########################################
+
+super + a
+	~/dotfiles/bspwm/toggle_border_width.sh single
+
+super + shift + a
+	~/dotfiles/bspwm/toggle_border_width.sh
+########################################
+
+# make sxhkd reload its configuration files:
+super + grave
+	pkill -USR1 -x sxhkd
+
+# quit/restart bspwm
+super + {q,r}
+	bspc {quit,wm -r}
+
+# close and kill window
+super + {_,shift + }w
+	bspc node -{c,k}
+
+# alternate between the tiled and monocle layout
+super + m
+	bspc desktop -l next
+
+# hide focused node, list hidden windows (node groups included)
+##################################
+
+super + e
+	bspc node --flag hidden=on
+
+super + x
+	~/dotfiles/bspwm/list_hidden_windows.sh
+##################################
+
+# swap the current node and the marked window 
+super + g
+	bspc node -s $(bspc query -N -n .marked) && bspc node $(bspc query -N -n .marked) -g marked
+
+# move a marked node to the focused desktop
+super + alt + semicolon
+        bspc node $(bspc query -N -n .marked) -d focused; \
+        bspc node $(bspc query -N -n .marked) -g marked
+
+# set the node flags (marked, locked, sticky, private)
+super + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
+# set the window state (tiled, pseudo_tiled, floating, fullscreen)
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus the next tiled window (neither hidden nor locked)
+super + c
+        ~/dotfiles/bspwm/toggle_tiled_window.sh
+
+# focus the next/previous floating windows in the current desktop
+super + v
+	~/dotfiles/bspwm/toggle_floating_window.sh
+
+# focus the next/previous node in the current desktop
+super + shift + bracket{left,right}
+	bspc node -f {prev,next}.local.!hidden.!floating
+
+super + bracket{left,right}
+        ~/dotfiles/bspwm/desktops.sh {toggle previous,toggle}
+
+# focus the next/previous node in the current desktop
+super + alt + bracket{left,right}
+        bspc node -f {prev,next}.local.!hidden.floating 
+
+# desktops management
+#############################################################################################
+# By default, there are 4 desktops in my workflow, 1 2 3 4, these are called parent desktops.
+#
+# Children desktops are normal desktops but with its name derived from the focused parent desktop.
+#
+# Eg. if you are in the parent desktop 1 and create a children desktop, its name will be "1 $RANDOM", where $RANDOM is a random number, but its name can be changed through 'super + alt + m', so "1 my_customized_name".
+#
+# Create a children desktop with 'super + ;', delete a focused children with 'super + alt + d'. Hide/unhide a children desktop with 'super + n'. 
+#
+# Rename a desktop with 'super + alt + m', this action keeps the hiding state, the parent and the group name. Include a desktop in a group with 'super + alt + g'. Focus the first member of a group with 'super + alt + apostrophe'.
+#
+# You can hide children desktops, so they will not be toggled with 'super + z', but they can be still be accessible by the 'super + shift + apostrophe' keybinding, unless they are part of a desktop group, so you will need to access them through 'super + alt + apostrophe'. Hiding children desktops are useful when you want to make groups of children desktops but you don't want to show all the members in the normal children desktops cycle (with 'super + z'), or when you just want to keep all your misc tasks (social media, music player, etc) in the background.
+#
+# Children desktop groups are indepentent from groups of other parent desktops. Eg: You can create 2 groups named "code" with children desktops from parent desktop 1 and 2 respectively, but each member will be part of its own group, that is, the groups will not act like one group.
+#
+# Node groups are similar to desktop groups, it is still in development, but it is already functional and usable. Include a node in a group with 'super + ctrl + c', use the same keybinding to remove the focused node from a group. Use 'super + alt + c' to toggle between nodes of the same group. It works as soon as you have two members.
+#############################################################################################
+
+# add a child desktop
+super + semicolon
+        ~/dotfiles/bspwm/desktops.sh add
+
+# remove a desktop
+super + alt + d
+        bspc desktop -r
+
+# rename a desktop
+super + alt + m
+        ~/dotfiles/bspwm/desktops.sh rename
+
+# hide/unhide a desktop
+super + n
+        ~/dotfiles/bspwm/desktops.sh hide 
+
+# toggle between children desktops (not hidden)
+super + z
+        ~/dotfiles/bspwm/desktops.sh toggle	
+
+# focus on the parent of the focused child desktop
+super + shift + z
+        ~/dotfiles/bspwm/desktops.sh focus parent
+
+# include the focused desktop in a group
+super + alt + g
+        ~/dotfiles/bspwm/desktops.sh group toggle
+
+# toggle between members of a group which the desktop belongs to
+super + alt + z
+        ~/dotfiles/bspwm/desktops.sh group
+
+# include the focused node in a group
+super + ctrl + c
+        ~/dotfiles/bspwm/nodes.sh add
+
+# toggle the members of a group which the focused node belongs to
+super + alt + c
+        ~/dotfiles/bspwm/nodes.sh toggle
+
+# focus on the first child desktop of a parent node
+super + {1-9,0}
+	~/dotfiles/bspwm/desktops.sh focus '^{1-9,10}'
+
+# focus on the parent node itself
+super + alt + {1-9,0}
+        bspc desktop -f '^{1-9,10}'
+
+# focus on children desktops (not a desktop from a group)
+super + shift + apostrophe
+        ~/dotfiles/bspwm/desktops.sh focus
+
+# focus on the first member of a desktop group
+super + alt + apostrophe
+        ~/dotfiles/bspwm/desktops.sh group focus
+
+# swap the focused node with the first member of a node group
+super + ctrl + apostrophe
+        ~/dotfiles/bspwm/nodes.sh focus
+
+# retrieve information with notifications
+#####################################################
+
+# retrieve focused desktop information
+super + apostrophe
+        ~/dotfiles/bspwm/notification_info.sh focused_desktop
+
+# retrieve date information 
+super + Escape
+        ~/dotfiles/bspwm/notification_info.sh date
+
+# retrieve windows information
+super + shift + Escape
+        ~/dotfiles/bspwm/notification_info.sh windows
+
+# retrieve desktops information
+super + alt + Escape
+        ~/dotfiles/bspwm/notification_info.sh desktops
+
+# close all notifications
+super + p
+        dunstctl close-all
+#####################################################
+
+# preselect
+##################################################################
+
+# preselect the direction
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# preselect the ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused node
+super + ctrl + space
+	bspc node -p cancel
+
+# cancel the preselection for the focused desktop
+super + ctrl + shift + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+# Move current window to a pre-selected space
+super + shift + m
+     	bspc node -n last.!automatic
+##################################################################
+
+# move/resize
+##################################################################
+
+# expand a window by moving one of its side outward
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its side inward
+super + alt + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+##################################################################
+
+# print a selected space of screen
+Print
+	sleep 0.2; \
+	scrot '/home/perplex/images/sc/%Y-%m-%d_%H-%M_scrot.png' -s -q 100 -e 'xclip -selection clipboard -target image/png -i $f'
+
+# print the entire screen
+shift + Print
+	sleep 0.2; \
+	scrot '/home/perplex/images/sc/%Y-%m-%d_%H-%M_scrot.png' -q 100 -e 'xclip -selection clipboard -target image/png -i $f'
+
+# toggle the audio between mute and the last volume value
+super + F10
+    	pactl set-sink-mute 0 toggle
+
+# lower volume
+super + F11
+        pactl set-sink-volume 0 -5%
+
+# raise volume
+super + F12
+        pactl set-sink-volume 0 +5%
