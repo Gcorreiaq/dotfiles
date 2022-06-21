@@ -134,10 +134,14 @@ if [[ $1 = "query" ]];then
     desktops=$(bspc query -D)
     focused_desktop=$(bspc query -D -d)
     for desktop in $desktops; do
+        desktop_name=$(bspc query -D -d $desktop --names)
+        if [[ -z $(echo $desktop_name | awk '{print $2}') ]];then
+            continue
+        fi
         if [[ "$desktop" = "$focused_desktop" ]];then
-            printf "* %s\n" "$(bspc query -D -d $desktop --names)"
+            printf "* %s\n" "$desktop_name"
         else
-            printf "  %s\n" "$(bspc query -D -d $desktop --names)"
+            printf "  %s\n" "$desktop_name"
         fi
     done
     exit

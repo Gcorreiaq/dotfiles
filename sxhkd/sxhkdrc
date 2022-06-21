@@ -42,6 +42,9 @@ super + grave
 super + {q,r}
 	bspc {quit,wm -r}
 
+super + alt + q
+        st -t stfloat sudo poweroff
+
 # close and kill window
 super + {_,shift + }w
 	bspc node -{c,k}
@@ -160,12 +163,12 @@ super + alt + c
         ~/dotfiles/bspwm/nodes.sh toggle
 
 # focus on the first child desktop of a parent node
-super + {1-9,0}
-	~/dotfiles/bspwm/desktops.sh focus '^{1-9,10}'
+super + {1-4}
+	~/dotfiles/bspwm/desktops.sh focus '^{1-4}'
 
 # focus on the parent node itself
-super + alt + {1-9,0}
-        bspc desktop -f '^{1-9,10}'
+super + alt + {1-4}
+        bspc desktop -f '^{1-4}'
 
 # focus on children desktops (not a desktop from a group)
 super + shift + apostrophe
@@ -210,22 +213,26 @@ super + p
 super + ctrl + {h,j,k,l}
 	bspc node -p {west,south,north,east}
 
-# preselect the ratio
-super + ctrl + {1-9}
-	bspc node -o 0.{1-9}
-
 # cancel the preselection for the focused node
 super + ctrl + space
 	bspc node -p cancel
-
-# cancel the preselection for the focused desktop
-super + ctrl + shift + space
-	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 # Move current window to a pre-selected space
 super + shift + m
      	bspc node -n last.!automatic
 ##################################################################
+
+# receptacles
+############################################
+
+# create receptacle (in the preselected space, if any)
+super + o
+        bspc node -i -n 'last.!automatic'
+
+# kill receptacles in the local desktop
+super + alt + o
+        bspc node 'any.local.leaf.!window' -k
+#############################################
 
 # move/resize
 ##################################################################
@@ -241,26 +248,36 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+super + 9
+        ~/dotfiles/bspwm/center_window.sh center
+
+super + ctrl + 9
+        ~/dotfiles/bspwm/center_window.sh left
+
+super + alt + 9
+        ~/dotfiles/bspwm/center_window.sh right
+
 ##################################################################
 
 # print a selected space of screen
-Print
+super + 0
 	sleep 0.2; \
-	scrot '/home/perplex/images/sc/%Y-%m-%d_%H-%M_scrot.png' -s -q 100 -e 'xclip -selection clipboard -target image/png -i $f'
+	scrot '~/images/sc/%Y-%m-%d_%H-%M_scrot.png' -s -q 100 -e 'xclip -selection clipboard -target image/png -i $f'
 
 # print the entire screen
-shift + Print
+super + shift + 0
 	sleep 0.2; \
-	scrot '/home/perplex/images/sc/%Y-%m-%d_%H-%M_scrot.png' -q 100 -e 'xclip -selection clipboard -target image/png -i $f'
+	scrot '~/images/sc/%Y-%m-%d_%H-%M_scrot.png' -q 100 -e 'xclip -selection clipboard -target image/png -i $f'
 
 # toggle the audio between mute and the last volume value
 super + F10
-    	pactl set-sink-mute 0 toggle
+    	amixer set Master toggle
 
 # lower volume
 super + F11
-        pactl set-sink-volume 0 -5%
+        amixer set Master 5%-
 
 # raise volume
 super + F12
-        pactl set-sink-volume 0 +5%
+        amixer set Master 5%+
