@@ -1,6 +1,5 @@
 #!/bin/sh
 
-sleep 10s
 
 while bspc subscribe -c 1 node_remove; do
     windows=$(cat ~/windows | sed 's/-/ /g' | awk '{print $3}')

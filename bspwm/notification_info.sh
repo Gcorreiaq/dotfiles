@@ -4,6 +4,7 @@ focused_desktop_id=1
 desktops_id=2
 date_id=3
 windows_id=4
+flags_id=5
 
 if [[ $1 = "cal" ]];then
     notify-send -h string:bgcolor:#000000 "$(cal) "
@@ -26,6 +27,25 @@ if [[ $1 = "date" ]];then
 fi
 
 if [[ $1 = "windows" ]];then
-    dunstify -h string:bgcolor:#000000 -r $windows_id "$(printf "windows:\n$(~/dotfiles/bspwm/nodes.sh | sort)\nhidden:\n$(~/dotfiles/bspwm/nodes.sh hidden | sort)") " 
+    dunstify -h string:bgcolor:#000000 -r $windows_id "$(printf "windows:\n$(~/dotfiles/bspwm/nodes.sh info | sort)\nhidden:\n$(~/dotfiles/bspwm/nodes.sh info hidden | sort)") " 
+    exit
+fi
+
+if [[ $1 = "volume" ]];then
+    volume=$(amixer get Master | tail -1 | awk '{print $5}' | sed 's/[^0-9]//g')
+    mute=$(amixer get Master | tail -1 | awk '{print $6}')
+    if [[ $mute = "[on]" ]];then
+        mute=
+    fi
+    dunstify -t 1000 -h string:bgcolor:#000000 -h string:hlcolor:#6F0000 -h string:frcolor:#000000 -h string:x-dunst-stack-tag:volume -h int:value:"$volume" "$volume $mute"
+    exit
+fi
+
+if [[ $1 = "flags" ]];then
+    marked=$(~/dotfiles/bspwm/nodes.sh info marked)
+    sticky=$(~/dotfiles/bspwm/nodes.sh info sticky)
+    locked=$(~/dotfiles/bspwm/nodes.sh info locked)
+    
+    dunstify -h string:bgcolor:#000000 -r $flags_id "$(printf "marked:\n$marked\nsticky:\n$sticky\nlocked:\n$locked")"
     exit
 fi

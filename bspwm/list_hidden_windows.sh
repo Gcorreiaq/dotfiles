@@ -2,10 +2,10 @@
 
 for win in $(bspc query -N -n .hidden.local.window)
 do
-	window+="$win		$(xprop -id $win | grep ^WM_NAME | awk '{for(i=3;i<=NF;++i) printf "%s ",$i;print ""}' | sed 's/"//g')\n"
+	window+="$win - $(xprop -id $win | grep ^WM_NAME | awk '{for(i=3;i<=NF;++i) printf "%s ",$i;print ""}' | sed 's/"//g')\n"
 done
 
-selected=$(echo -e "$window" | rofi -dmenu)
+selected=$(echo -e "$window" | dmenu -b -p hidden)
 
 [[ -z $selected ]] && exit;
 

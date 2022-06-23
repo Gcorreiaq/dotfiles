@@ -10,7 +10,7 @@ if [[ $1 = "add" ]];then
         ~/dotfiles/bspwm/nodes.sh remove
         exit
     fi
-    group=$(rofi -dmenu -p group_name | sed 's/[^a-z]//g')
+    group=$(dmenu -b -p group_name | sed 's/[^a-z]//g')
     if [[ -z $group ]];then
         exit
     fi
@@ -20,7 +20,7 @@ if [[ $1 = "add" ]];then
 fi
 
 if [[ $1 = "remove" ]];then
-    group=$(grep "$(bspc query -N -n)" ~/windows | sed 's/-/ /g' | awk '{print $2}' | rofi -dmenu -p group_remove)
+    group=$(grep "$(bspc query -N -n)" ~/windows | sed 's/-/ /g' | awk '{print $2}' | dmenu -b -p group_remove)
     if [[ -z $group ]];then
         exit
     fi
@@ -30,7 +30,7 @@ if [[ $1 = "remove" ]];then
 fi
 
 if [[ $1 = "focus" ]];then
-    group=$(cat ~/windows | sed 's/-/ /g' | awk '{print $2}' | sort -u | rofi -dmenu -p focus_group_node)
+    group=$(cat ~/windows | sed 's/-/ /g' | awk '{print $2}' | sort -u | dmenu -b -p focus_group_node)
     if [[ -z $group ]];then
         exit
     fi
@@ -70,26 +70,36 @@ if [[ $1 = "toggle" ]];then
     exit
 fi
 
-if [[ $1 = "hidden" ]];then
-    windows=$(bspc query -N -n .window.hidden)
-    for el in $windows; do
-        info=$(xprop -id "$el" WM_NAME | sed 's/.*=//' | sed 's/\"//g' 2>/dev/null)
-        desktop=$(bspc query -D -n $el --names)
-        if [[ $focused_desktop = $(bspc query -D -n "$el") ]];then
-            printf "%9s  *| %s\n" "$desktop" "$info"
+if [[ $1 = "info" ]];then
+    nodes=$windows
+
+    if [[ $2 = "marked" ]];then
+        nodes=$(bspc query -N -n .marked)
+    fi
+    
+    if [[ $2 = "sticky" ]];then
+        nodes=$(bspc query -N -n .sticky)
+    fi
+
+    if [[ $2 = "locked" ]];then
+        nodes=$(bspc query -N -n .locked)
+    fi
+
+    if [[ $2 = "hidden" ]];then
+        nodes=$(bspc query -N -n .window.hidden)
+    fi
+
+    for node in $nodes;do
+        info=$(xprop -id "$node" WM_NAME | sed 's/.*=//' | sed 's/\"//g' 2>/dev/null)
+        desktop=$(bspc query -D -n $node --names)
+
+        if [[ $focused_desktop = $(bspc query -D -n "$node") ]];then
+            printf "* %10s | %s\n" "$desktop" "$info"
         else
-            printf "%10s  | %s\n" "$desktop" "$info"
+            printf "  %10s | %s\n" "$desktop" "$info"
         fi
     done
+
     exit
 fi
 
-for el in $windows; do
-    info=$(xprop -id "$el" WM_NAME | sed 's/.*=//' | sed 's/\"//g' 2>/dev/null)
-    desktop=$(bspc query -D -n $el --names)
-    if [[ $focused_desktop = $(bspc query -D -n "$el") ]];then
-        printf "* %10s | %s\n" "$desktop" "$info"
-    else
-        printf "  %10s | %s\n" "$desktop" "$info"
-    fi
-done

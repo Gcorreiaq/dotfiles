@@ -8,7 +8,7 @@ super + alt + Return
 
 # program launcher
 super + @space
-	rofi -show run
+        dmenu_run -b
 
 # launch ranger
 super + d
@@ -69,8 +69,10 @@ super + g
 
 # move a marked node to the focused desktop
 super + alt + semicolon
-        bspc node $(bspc query -N -n .marked) -d focused; \
-        bspc node $(bspc query -N -n .marked) -g marked
+        ~/dotfiles/bspwm/marked_nodes.sh move desktop
+
+# marked_nodes.sh move desktop
+# marked_nodes.sh move tabbed
 
 # set the node flags (marked, locked, sticky, private)
 super + ctrl + {m,x,y,z}
@@ -182,6 +184,19 @@ super + alt + apostrophe
 super + ctrl + apostrophe
         ~/dotfiles/bspwm/nodes.sh focus
 
+#####################################################
+# tabbed
+#####################################################
+
+# add marked window to tabbed
+super + i
+        ~/dotfiles/bspwm/marked_nodes.sh move tabbed
+
+# remove from tabbed
+super + alt + i
+        xdotool windowreparent $(pfw) $(lsw -r)
+
+#####################################################
 # retrieve information with notifications
 #####################################################
 
@@ -201,13 +216,23 @@ super + shift + Escape
 super + alt + Escape
         ~/dotfiles/bspwm/notification_info.sh desktops
 
+super + ctrl + Escape
+        ~/dotfiles/bspwm/notification_info.sh cal
+
+# retrieve windows with flags
+super + backslash
+        ~/dotfiles/bspwm/notification_info.sh flags 
 # close all notifications
 super + p
         dunstctl close-all
-#####################################################
 
+# close the last notification
+super + alt + p
+        dunstctl close
+
+#####################################################
 # preselect
-##################################################################
+#####################################################
 
 # preselect the direction
 super + ctrl + {h,j,k,l}
@@ -220,10 +245,10 @@ super + ctrl + space
 # Move current window to a pre-selected space
 super + shift + m
      	bspc node -n last.!automatic
-##################################################################
 
+#####################################################
 # receptacles
-############################################
+#####################################################
 
 # create receptacle (in the preselected space, if any)
 super + o
@@ -249,35 +274,45 @@ super + alt + shift + {h,j,k,l}
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
+# move window to the center
 super + 9
         ~/dotfiles/bspwm/center_window.sh center
 
+# move window to the left of the screen
 super + ctrl + 9
         ~/dotfiles/bspwm/center_window.sh left
 
+# move window to the right of the screen
 super + alt + 9
         ~/dotfiles/bspwm/center_window.sh right
+
+# resize window
+super + 8
+        ~/dotfiles/bspwm/resize_window.sh
 
 ##################################################################
 
 # print a selected space of screen
 super + 0
 	sleep 0.2; \
-	scrot '~/images/sc/%Y-%m-%d_%H-%M_scrot.png' -s -q 100 -e 'xclip -selection clipboard -target image/png -i $f'
+	scrot '/home/perplex/images/sc/%Y-%m-%d_%H-%M_scrot.png' -s -q 100 -e 'xclip -selection clipboard -target image/png -i $f'
 
 # print the entire screen
 super + shift + 0
 	sleep 0.2; \
-	scrot '~/images/sc/%Y-%m-%d_%H-%M_scrot.png' -q 100 -e 'xclip -selection clipboard -target image/png -i $f'
+	scrot '/home/perplex/images/sc/%Y-%m-%d_%H-%M_scrot.png' -q 100 -e 'xclip -selection clipboard -target image/png -i $f'
 
 # toggle the audio between mute and the last volume value
 super + F10
-    	amixer set Master toggle
+    	amixer set Master toggle; \
+        ~/dotfiles/bspwm/notification_info.sh volume
 
 # lower volume
 super + F11
-        amixer set Master 5%-
+        amixer set Master 5%-; \
+        ~/dotfiles/bspwm/notification_info.sh volume
 
 # raise volume
 super + F12
-        amixer set Master 5%+
+        amixer set Master 5%+; \
+        ~/dotfiles/bspwm/notification_info.sh volume

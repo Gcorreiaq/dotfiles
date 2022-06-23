@@ -19,6 +19,8 @@ bspc rule -a feh state=floating
 bspc rule -a okular state=floating rectangle=900x700 center=on
 bspc rule -a dolphin state=floating
 bspc rule -a st-256color:st-256color:htop desktop=^1
+bspc rule -a Pavucontrol state=floating
+bspc rule -a Nvidia-settings state=floating
 
 st htop -t htop &
 setxkbmap -layout us,ru,br -option grp:shifts_toggle
