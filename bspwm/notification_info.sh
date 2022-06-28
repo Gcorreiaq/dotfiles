@@ -22,7 +22,7 @@ if [[ $1 = "desktops" ]];then
 fi
 
 if [[ $1 = "date" ]];then
-    dunstify -h string:bgcolor:#000000 -r $date_id "$(date "+%a %h-%m %d %H:%M:%S") mem: $(free -m | grep Mem: | awk '{print $3}') "
+    dunstify -h string:bgcolor:#000000 -r $date_id "$(date "+%a %h-%m %d %H:%M:%S") mem: $(free -m | grep Mem: | awk '{print $3}') cpu_temp: $(sensors | tail -n 2 | sed 's/[^0-9.°C]//g')"
     exit
 fi
 

@@ -316,3 +316,39 @@ super + F11
 super + F12
         amixer set Master 5%+; \
         ~/dotfiles/bspwm/notification_info.sh volume
+
+super + comma
+        mocp -r
+
+super + period
+        mocp -f
+
+super + slash
+        mocp -G
+
+super + alt + comma
+        mocp -k -5
+
+super + alt + period
+        mocp -k 5
+
+# additional button down turns off brightness
+super + button8
+        polychromatic-cli -o brightness -p 0
+
+# additional button up turns on brightness
+super + button9
+        polychromatic-cli -o brightness -p 100
+
+# mouse_middle_button changes between tiled and floating window state
+super + button2
+        if [[ -z $(bspc query -N -n 'focused.!floating') ]]; then bspc node -t tiled; \
+        else bspc node -t floating; fi
+
+# mouse_scroll_up toggle tiled window
+super + button4
+        ~/dotfiles/bspwm/toggle_tiled_window.sh
+
+# mouse_scroll_down toggle floating window
+super + button5
+        ~/dotfiles/bspwm/toggle_floating_window.sh
