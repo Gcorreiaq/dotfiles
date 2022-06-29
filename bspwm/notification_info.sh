@@ -34,10 +34,11 @@ fi
 if [[ $1 = "volume" ]];then
     volume=$(amixer get Master | tail -1 | awk '{print $5}' | sed 's/[^0-9]//g')
     mute=$(amixer get Master | tail -1 | awk '{print $6}')
+    sink_name=$(pactl get-default-sink | sed 's/\./ /g' | awk '{print $NF}')
     if [[ $mute = "[on]" ]];then
         mute=
     fi
-    dunstify -t 1000 -h string:bgcolor:#000000 -h string:hlcolor:#6F0000 -h string:frcolor:#000000 -h string:x-dunst-stack-tag:volume -h int:value:"$volume" "$volume $mute"
+    dunstify -t 1000 -h string:bgcolor:#000000 -h string:hlcolor:#6F0000 -h string:frcolor:#000000 -h string:x-dunst-stack-tag:volume -h int:value:"$volume" "$(printf "$sink_name\n$volume $mute")"
     exit
 fi
 
