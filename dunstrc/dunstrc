@@ -1,0 +1,18 @@
+[global]
+
+font = "Monospace 8"
+width = (0, 1440)
+height = (0,900)
+origin = bottom-left
+offset = 0x0
+padding = 1
+horizontal_padding = 1
+frame_width = 0
+timeout = 500s
+hide_duplicate_count = true
+notification_limit = 10
+indicate_hidden = false
+sticky_history = false
+history_length = 1
+separator_height = 0
+show_age_threshold = -1
