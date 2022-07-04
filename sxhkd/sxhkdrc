@@ -45,6 +45,12 @@ super + {q,r}
 super + alt + q
         st -t stfloat sudo poweroff
 
+super + alt + s
+        st -t stfloat sudo /usr/bin/suspend
+
+super + alt + r
+        st -t stfloat sudo shutdown -r now
+
 # close and kill window
 super + {_,shift + }w
 	bspc node -{c,k}
