@@ -323,18 +323,27 @@ super + F12
         amixer set Master 5%+; \
         ~/dotfiles/bspwm/notification_info.sh volume
 
+# play previous song
 super + comma
         mocp -r
 
+# play next song
 super + period
         mocp -f
 
+# toggle play/pause
 super + slash
         mocp -G
 
+# information about the current song
+super + alt + slash
+        ~/dotfiles/bspwm/notification_info.sh song
+
+# backwards 5 seconds
 super + alt + comma
         mocp -k -5
 
+# forwards 5 seconds
 super + alt + period
         mocp -k 5
 
