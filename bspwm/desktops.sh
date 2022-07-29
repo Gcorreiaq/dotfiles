@@ -12,7 +12,7 @@ fi
 
 if [[ $1 = "group" ]];then
     if [[ $2 = "focus" ]];then
-        rofi=$(bspc query -D --names | grep _-.*$ | sed 's/^.*_-//' | sort -u | dmenu -b -p focus-group)
+        rofi=$(bspc query -D --names | grep _-.*$ | sed 's/^.*_-//' | sort -u | dmenu -sb "#000000" -sf red -sb "#3f0000" -b -p focus-group)
         next=$(bspc query -D --names | grep "_-$rofi$" | awk 'NR==1 {print}')
         bspc desktop -f "$next"
         exit
@@ -24,7 +24,7 @@ if [[ $1 = "group" ]];then
             bspc desktop -n "$rename"
             exit
         fi
-        rofi=$(dmenu -b -p group)
+        rofi=$(dmenu -sb "#000000" -sf red -sb "#3f0000" -b -p group)
         if [[ -z $rofi ]];then
             exit
         fi
@@ -96,7 +96,7 @@ if [[ $1 = "focus" ]];then
     fi
 
     parent=$(bspc query -D -d --names | awk '{print $1}' | sed 's/-//')
-    rofi=$(bspc query -D --names | grep -v _- | grep "$parent[ -]"|awk '{print $2}' | dmenu -b -p focus)
+    rofi=$(bspc query -D --names | grep -v _- | grep "$parent[ -]"|awk '{print $2}' | dmenu -sb "#000000" -sf red -sb "#3f0000" -b -p focus)
     if [[ -z $rofi ]];then
         exit
     fi
@@ -107,7 +107,7 @@ fi
 
 if [[ $1 = "send" ]];then
     parent=$(bspc query -D -d --names | awk '{print $1}' | sed 's/-//')
-    rofi=$(bspc query -D --names | grep "$parent[ -]"|awk '{print $2}' | dmenu -b -p send)
+    rofi=$(bspc query -D --names | grep "$parent[ -]"|awk '{print $2}' | dmenu -sb "#000000" -sf red -sb "#3f0000" -b -p send)
     if [[ -z $rofi ]];then
         exit
     fi
@@ -117,7 +117,7 @@ if [[ $1 = "send" ]];then
 fi
 
 if [[ $1 = "rename" ]];then
-    rofi=$(dmenu -b -p rename)
+    rofi=$(dmenu -sb "#000000" -sf red -sb "#3f0000" -b -p rename) 
     if [[ -z $rofi ]];then
         exit
     fi
@@ -155,7 +155,7 @@ if [[ $1 = "hide" ]];then
     exit
 fi
 parent=$(bspc query -D -d --names | awk '{print $1}' | sed 's/-//')
-rofi=$(bspc query -D --names | grep "$parent[ -]"| awk '{print $2}' | dmenu -b -p del)
+rofi=$(bspc query -D --names | grep "$parent[ -]"| awk '{print $2}' | dmenu -sb "#000000" -sf red -sb "#3f0000" -b -p del)
 
 if [[ -z $rofi ]];then
     exit

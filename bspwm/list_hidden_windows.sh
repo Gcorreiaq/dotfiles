@@ -5,7 +5,7 @@ do
 	window+="$win - $(xprop -id $win | grep ^WM_NAME | awk '{for(i=3;i<=NF;++i) printf "%s ",$i;print ""}' | sed 's/"//g')\n"
 done
 
-selected=$(echo -e "$window" | dmenu -b -p hidden)
+selected=$(echo -e "$window" | dmenu -sb "#000000" -sf red -sb "#3f0000" -b -p hidden)
 
 [[ -z $selected ]] && exit;
 

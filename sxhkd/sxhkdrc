@@ -8,7 +8,13 @@ super + alt + Return
 
 # program launcher
 super + @space
-        dmenu_run -b
+        dmenu_run -sb "#000000" -sf red -sb "#3f0000" -b
+
+super + alt + @space
+        dmenu_run -b; \
+        bspc node -t floating; \
+        ~/dotfiles/bspwm/resize_window.sh; \
+        ~/dotfiles/bspwm/center_window.sh center
 
 # launch ranger
 super + d
@@ -301,12 +307,12 @@ super + 8
 # print a selected space of screen
 super + 0
 	sleep 0.2; \
-	scrot '/home/perplex/images/sc/%Y-%m-%d_%H-%M_scrot.png' -s -q 100 -e 'xclip -selection clipboard -target image/png -i $f'
+	scrot '/mnt/ext/images/sc/%Y-%m-%d_%H-%M_scrot.png' -s -q 100 -e 'xclip -selection clipboard -target image/png -i $f'
 
 # print the entire screen
 super + shift + 0
 	sleep 0.2; \
-	scrot '/home/perplex/images/sc/%Y-%m-%d_%H-%M_scrot.png' -q 100 -e 'xclip -selection clipboard -target image/png -i $f'
+	scrot '/mnt/ext/images/sc/%Y-%m-%d_%H-%M_scrot.png' -q 100 -e 'xclip -selection clipboard -target image/png -i $f'
 
 # toggle the audio between mute and the last volume value
 super + F10

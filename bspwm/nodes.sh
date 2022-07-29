@@ -10,7 +10,7 @@ if [[ $1 = "add" ]];then
         ~/dotfiles/bspwm/nodes.sh remove
         exit
     fi
-    group=$(dmenu -b -p group_name | sed 's/[^a-z]//g')
+    group=$( dmenu -sb "#000000" -sf red -sb "#3f0000" -b -p group_name | sed 's/[^a-z]//g')
     if [[ -z $group ]];then
         exit
     fi
@@ -20,7 +20,7 @@ if [[ $1 = "add" ]];then
 fi
 
 if [[ $1 = "remove" ]];then
-    group=$(grep "$(bspc query -N -n)" ~/windows | sed 's/-/ /g' | awk '{print $2}' | dmenu -b -p group_remove)
+    group=$(grep "$(bspc query -N -n)" ~/windows | sed 's/-/ /g' | awk '{print $2}' |  dmenu -sb "#000000" -sf red -sb "#3f0000" -b -p group_remove)
     if [[ -z $group ]];then
         exit
     fi
@@ -30,7 +30,7 @@ if [[ $1 = "remove" ]];then
 fi
 
 if [[ $1 = "focus" ]];then
-    group=$(cat ~/windows | sed 's/-/ /g' | awk '{print $2}' | sort -u | dmenu -b -p focus_group_node)
+    group=$(cat ~/windows | sed 's/-/ /g' | awk '{print $2}' | sort -u | dmenu -sb "#000000" -sf red -sb "#3f0000" -b -p focus_group_node)
     if [[ -z $group ]];then
         exit
     fi
