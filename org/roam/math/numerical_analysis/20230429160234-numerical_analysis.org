@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       dec88d48-eef6-488e-b6ec-f73ca5367323
-:END:
-#+title: numerical analysis
-
-Numerical analysis is the study of algorithms that use numerical approximation (as opposed to symbolic manipulations) for the problems of [[id:1c6c7a06-fafc-4d3f-9eae-eb0f17a78f9b][mathematical analysis]] (as distinguished from discrete mathematics).

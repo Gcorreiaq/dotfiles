@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       d7c5ac72-4f7f-404c-8f7e-d22ee3a12ecc
-:END:
-#+title: Recurrence
-

@@ -1,0 +1,21 @@
+app-text/poppler cairo
+# required by media-libs/gegl-0.4.64-r1::gentoo
+# required by media-gfx/gimp-3.0.6::gentoo
+# required by @selected
+# required by @world (argument)
+>=media-libs/babl-0.1.116 lcms introspection
+# required by media-gfx/gimp-3.0.6::gentoo
+# required by @selected
+# required by @world (argument)
+>=media-libs/gegl-0.4.64-r1 lcms introspection
+# required by x11-libs/xapp-2.8.13::gentoo
+# required by sys-apps/xdg-desktop-portal-xapp-1.1.2::gentoo
+# required by xdg-desktop-portal-xapp (argument)
+>=dev-libs/libdbusmenu-16.04.0-r4 gtk3
+# required by www-client/chromium-145.0.7632.109::gentoo[llvm_slot_21,-bundled-toolchain]
+# required by @selected
+# required by @world (argument)
+>=dev-lang/rust-bin-1.92.0 rustfmt
+# required by app-office/libreoffice-25.2.7.2-r1::gentoo
+# required by libreoffice (argument)
+>=dev-libs/xmlsec-1.3.10-r1 nss

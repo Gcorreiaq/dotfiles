@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       6f0a4190-b6b4-4766-85ca-ba7dde9cb2d8
-:END:
-#+title: automata theory
-

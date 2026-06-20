@@ -1,0 +1,34 @@
+# created by eselect-repo
+
+[guru]
+location = /var/db/repos/guru
+sync-type = git
+sync-uri = https://github.com/gentoo-mirror/guru.git
+
+[edgets]
+location = /var/db/repos/edgets
+sync-type = git
+sync-uri = https://github.com/gentoo-mirror/edgets.git
+
+[spikyatlinux]
+location = /var/db/repos/spikyatlinux
+sync-type = git
+sync-uri = https://github.com/gentoo-mirror/spikyatlinux.git
+
+[p-repo]
+location = /var/db/repos/p-repo
+sync-type = git
+sync-uri = https://github.com/Gcorreiaq/p-repo.git
+
+[crossdev]
+location = /var/db/repos/crossdev
+
+[benzene-overlay]
+location = /var/db/repos/benzene-overlay
+sync-type = git
+sync-uri = https://github.com/gentoo-mirror/benzene-overlay.git
+
+[zugaina]
+location = /var/db/repos/zugaina
+sync-type = git
+sync-uri = https://github.com/gentoo-mirror/zugaina.git

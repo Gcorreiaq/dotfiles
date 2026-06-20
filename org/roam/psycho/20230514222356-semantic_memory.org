@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       69b0f96a-bc9a-4cc8-b9f1-0f6b549a2c9b
-:END:
-#+title: semantic memory
-

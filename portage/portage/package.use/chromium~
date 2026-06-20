@@ -1,8 +1,0 @@
-dev-libs/libxml2 icu
-media-libs/harfbuzz icu
-sys-libs/zlib minizip
-net-libs/nodejs inspector
-virtual/rust profiler
-
-# if qt
-dev-lang/rust-bin profilerdev-qt/qtgui egl

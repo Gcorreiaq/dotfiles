@@ -1,0 +1,7 @@
+# for gui and jit to work
+sys-devel/gcc jit
+x11-libs/motif jpeg png
+app-emacs/emacs-common gui
+
+app-editors/emacs gui png jpeg svg gtk -jit xft motif libxml2 json imagemagick harfbuzz gif sqlite tree-sitter webp xwidgets cairo gfile -alsa 
+media-gfx/imagemagick svg xml

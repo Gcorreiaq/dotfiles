@@ -1,0 +1,41 @@
+diff '--color=auto' -crB sway/sway/commands/focus.c swaypatched/sway/commands/focus.c
+*** sway/sway/commands/focus.c	2024-08-10 00:02:23.326451667 -0300
+--- swaypatched/sway/commands/focus.c	2024-08-10 00:24:17.349417744 -0300
+***************
+*** 350,355 ****
+--- 350,372 ----
+  	return cmd_results_new(CMD_SUCCESS, NULL);
+  }
+  
++ static struct cmd_results *focus_container(void) {
++   	struct sway_seat *seat = config->handler_context.seat;
++ 	struct sway_container *con = config->handler_context.container;
++ 	if (!con || con->pending.fullscreen_mode) {
++ 		return cmd_results_new(CMD_SUCCESS, NULL);
++ 	}
++ 	
++ 	struct sway_node *parent = node_get_parent(&con->node);
++ 	while (parent && parent->type == N_CONTAINER) {
++ 	  	seat_set_focus(seat, parent);
++ 		seat_consider_warp_to_focus(seat);
++ 		parent = node_get_parent(parent);
++ 	}
++ 
++ 	return cmd_results_new(CMD_SUCCESS, NULL);
++ }
++ 
+  static struct cmd_results *focus_child(void) {
+  	struct sway_seat *seat = config->handler_context.seat;
+  	struct sway_node *node = config->handler_context.node;
+***************
+*** 416,421 ****
+--- 433,441 ----
+  	if (strcasecmp(argv[0], "parent") == 0) {
+  		return focus_parent();
+  	}
++ 	if (strcasecmp(argv[0], "container") == 0) {
++ 	        return focus_container();
++ 	}
+  	if (strcasecmp(argv[0], "child") == 0) {
+  		return focus_child();
+  	}

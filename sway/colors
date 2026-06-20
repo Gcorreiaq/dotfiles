@@ -4,11 +4,11 @@
 
 wal -c
 #wal -e -n -i ~/images/cover.png
-wpg -R ~/images/cover.png
-wpg -s ~/images/cover.png -n --noreload
+wpg -R ~/images/color.png
+wpg -s ~/images/color.png -n --noreload
 
 . ~/.cache/wal/colors.sh
-. ~/dotfiles/ChromiumPywal/generate-theme.sh &
+. ~/dotfiles/ChromiumPywal/generate-theme.sh "/home/g/images/cover.png" &
 genzathurarc > ~/.config/zathura/zathurarc
 
 emacsclient --eval "(org-babel-load-file (expand-file-name \"~/.emacs.d/theme.org\")))"

@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       a9005330-4425-4065-bb79-55bb2da9bd6e
-:END:
-#+title: polar coordinates
-

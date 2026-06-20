@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       9ac1c4c7-9cba-48de-b673-7f0e0c56d3df
-:END:
-#+title: long term potentiation
-
-Long-term potentiation allows a synapse to increase strength with increasing numbers of transmitted signals between the two neurons.

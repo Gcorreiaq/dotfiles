@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       46e35ddd-d578-46bc-9f37-92d2d36fc8f8
-:END:
-#+title: basal ganglia
-

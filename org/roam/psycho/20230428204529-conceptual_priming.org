@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       afe5c2ae-f059-4d12-aff3-f740e191a5fc
-:END:
-#+title: conceptual priming
-
-Conceptual priming is based on the *meaning of a stimulus* and is enhanced by semantic tasks. For example, the word table will show conceptual priming effects on the word chair, because the words belong to the same category.
-
-The difference between [[id:7251e97a-1848-4100-aad5-8faf8d379cc1][perceptual]] and conceptual types of priming is whether items with a similar form or items with a similar meaning are primed, respectively.

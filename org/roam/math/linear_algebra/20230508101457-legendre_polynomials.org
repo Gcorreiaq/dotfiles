@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       44a664a1-b6b3-446c-b6c7-2d5e6cfd8a0d
-:END:
-#+title: legendre polynomials
-
-Legendre polynomials are a *system of complete and [[id:87c922f6-1afe-493c-98ea-5397c355556e][orthogonal polynomials]]* with a *vast number of mathematical properties* and numerous applications.

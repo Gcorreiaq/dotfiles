@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       ddb3f346-eff1-4de0-90c5-77278c589cc1
-:END:
-#+title: covariance
-
-Covariance is a measure of the joint variability of two random variables. If the greater values of one variable mainly correspond with the greater values of the other variable, and the same holds for the lesser values (that is, the variables tend to show similar behavior), the covariance is positive.

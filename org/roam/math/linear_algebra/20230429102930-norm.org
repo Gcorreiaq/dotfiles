@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       22e0f44e-f021-42f2-acfd-2452989c1036
-:END:
-#+title: norm
-
-A norm is a *function from a real or complex vector space* to the non-negative real numbers that behaves in certain ways like the *distance from the origin*: it *commutes with scaling*, *obeys a form of the triangle inequality*, and is *zero only at the origin*.
-
-In particular, the *Euclidean distance in a Euclidean space* is defined by a *norm* on the associated Euclidean vector space, called the Euclidean norm, the 2-norm, or, sometimes, the magnitude of the vector. This norm can be defined as the *square root of the inner product of a vector with itself*.

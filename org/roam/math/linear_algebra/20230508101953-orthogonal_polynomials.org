@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       87c922f6-1afe-493c-98ea-5397c355556e
-:END:
-#+title: orthogonal polynomials
-

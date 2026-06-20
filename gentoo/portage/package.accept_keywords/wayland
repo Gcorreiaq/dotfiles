@@ -1,0 +1,8 @@
+dev-libs/wayland **
+dev-util/wayland-scanner **
+gui-apps/xwaylandvideobridge **
+x11-base/xwayland **
+
+
+media-video/wireplumber **
+gui-libs/wlroots **

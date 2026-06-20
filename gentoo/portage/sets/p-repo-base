@@ -1,0 +1,111 @@
+
+# GUI base
+
+sys-process/btop
+sys-process/htop
+sys-process/lsof
+sys-process/iotop
+app-admin/sysstat
+
+sys-boot/grub
+sys-boot/os-prober
+
+#sys-fs/fuse
+sys-fs/ntfs3g
+sys-fs/dosfstools
+sys-fs/exfatprogs
+
+gui-wm/sway
+gui-apps/swaybg
+gui-apps/slurp
+gui-apps/grim
+app-misc/jq
+# p-repo overfocus
+gui-wm/sway-overfocus
+gui-apps/wl-clipboard
+# guru repo mpvpaper
+gui-apps/mpvpaper
+
+# programs
+
+# benzene-overlay goldendict
+app-text/goldendict
+app-editors/emacs
+app-admin/keepassxc
+net-p2p/syncthing
+sci-visualization/gnuplot
+
+app-text/zathura
+app-text/zathura-djvu
+app-text/zathurapdf-poppler
+
+media-gfx/feh
+media-gfx/gimp
+media-gfx/imagemagick
+
+media-libs/flac
+media-plugins/alsa-plugins
+media-sound/alsa-utils
+media-sound/pavucontrol
+media-sound/pulseaudio
+media-video/ffmpeg
+media-video/mpv
+
+llvm-core/clang
+virtual/jdk
+virtual/jre
+
+# browsers
+
+www-client/chromium
+www-client/firefox-bin
+
+# gentoo
+
+dev-util/cargo-ebuild
+app-portage/gentoolkit
+app-eselect/eselect-repository
+sys-kernel/gentoo-sources
+sys-kernel/linux-firmware
+
+# Misc
+
+dev-python/pip
+app-text/tree
+app-shells/fzf
+app-misc/ranger
+app-misc/neofetch
+x11-apps/xev
+x11-apps/xprop
+x11-misc/dmenu
+x11-terms/st
+x11-misc/xdg-utils
+sys-apps/lshw
+# emacs ripgrep
+sys-apps/ripgrep
+# gentoo wayland screen sharing
+gui-libs/xdg-desktop-portal-wlr
+sys-apps/xdg-desktop-portal-gnome
+sys-apps/xdg-desktop-portal-gtk
+sys-apps/xdg-desktop-portal-xapp
+net-misc/yt-dlp
+media-libs/exiftool
+net-p2p/transmission
+sys-apps/arch-chroot
+sys-apps/hdparm
+app-admin/sudo
+
+
+app-arch/p7zip
+app-arch/rar
+app-arch/zip
+
+sys-apps/lm-sensors
+app-admin/ryzen_monitor
+
+media-fonts/iosevka
+media-fonts/nerd-fonts
+media-fonts/noto
+media-fonts/noto-cjk
+media-fonts/noto-emoji
+media-fonts/urw-fonts

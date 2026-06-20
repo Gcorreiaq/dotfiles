@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       26ca2c81-06c2-49a9-8067-39fd547cd1d6
-:END:
-#+title: hippocampus
-

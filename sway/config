@@ -16,9 +16,11 @@ for_window {
 	   [class="stfloat"] floating enable
 	   [class="stfloat"] resize set 1018 620
 	   [class="feh"] floating enable
-	   [class="feh"] fullscreen enable
+#	   [class="feh"] fullscreen enable
 	   [class="pomatez"] floating enable
 	   [class="Anki"] floating enable
+	   [class="GoldenDict"] floating enable
+	   [class="obsidian"] floating enable
 	   #
 	   [app_id="org.telegram.desktop._9b27531ae03cace6e83ac743980ed92a"] floating enable
 	   [app_id="mpv"] fullscreen enable
@@ -30,16 +32,17 @@ for_window {
 	   [app_id="chromium-browser-chromium"] opacity 0.99
 	   [app_id="firefox"] opacity 0.99
 	   [app_id="org.pwmt.zathura"] opacity 0.99
+	   [class="obsidian"] opacity 0.99
 	   [class="Minecraft*"] opacity 1
 }
 
 ### Variables
 set $mod Mod4
 set $mod2 Mod5
-set $left a
-set $down s
-set $up w
-set $right d
+set $left s
+set $down d
+set $up e
+set $right f
 
 
 
@@ -60,15 +63,19 @@ seat seat0 hide_cursor 3000
 seat seat0 xcursor_theme hack
 
 output DP-1 resolution 3440x1440@144Hz
-output HDMI-A-1 2560x1600@120Hz
-
+output HDMI-A-1 scale 1.5
 output * bg ~/images/cover.png fill
+
+workspace 1 output DP-1
+workspace 5 output HDMI-A-1
+
+bindsym $mod+mod2 mode "apps"
 #exec mpvpaper -vs -o "no-audio loop" DP-1 ~/images/gifs/cover.mp4
 
     # Start a terminal
-    bindcode $mod+26 exec st -f Iosevka -z 14
-    bindcode $mod2+26 exec st -f Iosevka -z 14 -c stfloat
-    bindsym $mod+Alt+e exec alacritty
+    bindcode $mod+25 exec st -f Iosevka -z 14
+    bindcode $mod2+25 exec st -f Iosevka -z 14 -c stfloat
+    bindsym $mod+Alt+w exec alacritty
 
     # Kill focused window
     bindcode --no-repeat $mod+24 kill
@@ -82,18 +89,15 @@ output * bg ~/images/cover.png fill
     bindsym Print exec grim -g "$(slurp)" - | wl-copy -t image/png && wl-paste > /mnt/hd2/images/sc/"$(date +%Y-%m-%d-%H-%M-%S | tr A-Z a-z).png"
 
     # Set keyboard layout
-    bindcode $mod2+52 exec ~/dotfiles/bspwm/setkmap "us ru br"
-
-    bindcode $mod2+10 exec ~/dotfiles/bspwm/setkmap set "en"
-    bindcode $mod2+11 exec ~/dotfiles/bspwm/setkmap set "ru"
+    bindcode $mod2+33 exec ~/dotfiles/bspwm/setkmap "us ru br"
     
     bindcode $mod+33 exec ~/dotfiles/bspwm/setkmap reset
 
     # Reload the configuration file
-    bindsym $mod2+r reload
+    bindsym $mod2+q reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit sway?' -B 'Yes' 'swaymsg exit'
+    bindsym $mod+Shift+q exec swaynag -t warning -m 'Exit sway?' -B 'Yes' 'swaymsg exit'
 
      # Switch to window, swayfocus
      bindsym $mod+$left exec sway-overfocus split-lt float-lt output-ls
@@ -115,58 +119,58 @@ output * bg ~/images/cover.png fill
      bindsym $mod+2 workspace number 2
      bindsym $mod+3 workspace number 3
      bindsym $mod+4 workspace number 4
+     bindsym $mod+5 workspace number 5
      
      # Move window to workspace
      bindsym $mod+Shift+1 move container to workspace number 1
      bindsym $mod+Shift+2 move container to workspace number 2
      bindsym $mod+Shift+3 move container to workspace number 3
      bindsym $mod+Shift+4 move container to workspace number 4
-     
+     bindsym $mod+Shift+5 move container to workspace number 5
      # Split layout
-     bindsym $mod+c splitv
-     bindsym $mod+v splith
+     bindsym $mod+v splitv
+     bindsym $mod+b splith
      bindsym $mod2+v split none
      
      # Sticky window
      bindsym $mod+y [con_id=__focused__] sticky toggle
 
      # Focus to parent or child container
-     bindsym $mod+z focus container
-     bindsym $mod2+Alt+w focus parent
-     bindsym $mod2+Alt+s focus child
-     bindsym $mod+x focus child
+#   bindsym $mod+z focus container
+     bindsym $mod2+e focus parent
+     bindsym $mod2+r focus child
+     bindsym $mod2+t exec ~/dotfiles/sway/tab_focus container
+     
      # Change layout of container
      bindsym $mod+t layout toggle tabbed split
 
      # Switch between tabs in a container, swayoverfocus
-     bindsym $mod+b exec sway-overfocus group-rw group-dw
-     bindsym $mod+Alt+b exec sway-overfocus group-lw group-uw
-     bindsym $mod2+Alt+a exec sway-overfocus group-lw group-uw
-     bindsym $mod2+Alt+d exec sway-overfocus group-rw group-dw
-     
+     bindsym $mod+z exec sway-overfocus group-lw group-uw
+     bindsym $mod+x exec sway-overfocus group-rw group-dw
+     bindsym $mod+c exec ~/dotfiles/sway/tab_focus parent
+
+     bindsym $mod2+2 exec ~/dotfiles/sway/tab_focus set_pin
+     bindsym $mod2+1 exec ~/dotfiles/sway/tab_focus focus_pin
+
      # Toggle window to fullscreen or floating/non-floating
-     bindsym $mod+f fullscreen
+     bindsym $mod+a fullscreen
      bindsym $mod+r floating toggle
      
      # Toggle focus between floating and non-floating windows
-     bindsym $mod+space focus mode_toggle
+     bindsym $mod+Tab focus mode_toggle
 
      # Move to individual scratchpad 1-4
 
      # Show individual scratchpad 1-4
-     bindsym $mod+Tab exec $scratch toggle
+   # bindsym $mod+Tab exec $scratch toggle
      
      bindsym $mod2+c exec ~/dotfiles/sway/toggle_floating hide
      bindsym $mod2+space exec ~/dotfiles/sway/toggle_floating hide focused
+     
      bindsym $mod2+a exec $scratch select 1				
      bindsym $mod2+s exec $scratch select 2
      bindsym $mod2+d exec $scratch select 3
      bindsym $mod2+f exec $scratch select 4
-
-     bindsym $mod+Ctrl+a exec $scratch select 1 select
-     bindsym $mod+Ctrl+s exec $scratch select 2 select
-     bindsym $mod+Ctrl+d exec $scratch select 3 select
-     bindsym $mod+Ctrl+f exec $scratch select 4 select
      
 # Resize windows/containers
 mode "resize" {
@@ -179,10 +183,6 @@ mode "resize" {
     bindsym Shift+$down resize grow height 150px
     bindsym Shift+$up resize shrink height 150px
     bindsym Shift+$right resize grow width 150px
-
-    bindsym $mod+z focus container
-    bindsym $mod+Shift+x focus parent
-    bindsym $mod+x focus child
 
     bindsym c move position center	
     bindsym g mode "move"
@@ -204,10 +204,6 @@ mode "move" {
      bindsym Shift+$up exec $move up 150
      bindsym Shift+$right exec $move right 150
 
-     bindsym $mod+z focus container
-     bindsym $mod+Shift+x focus parent
-     bindsym $mod+x focus child
-
      bindsym c move position center
      bindsym g mode "resize"
      bindsym $mod+g mode "resize"
@@ -218,14 +214,32 @@ mode "move" {
 # Launch apps
 mode "apps" {
     bindsym e exec $launch emacs
-    bindsym c exec $launch chromium
     bindsym t exec $launch tg
     bindsym r exec $launch st -f Iosevka -z 14 -c stfloat -e ~/dotfiles/bspwm/ranger
     bindsym d exec swaymsg mode "default" && ~/dotfiles/bspwm/dmenu_run
     bindsym v exec $launch pavucontrol
-    
+    bindsym q exec $launch obsidian-run
+    bindsym c mode "chromium"
+    bindsym f mode "firefox"
+
     bindsym Ctrl+g mode "default"
     bindsym Escape mode "default"
+}
+
+mode "chromium" {
+     bindsym a exec $launch chromium "about:home"
+     bindsym s exec $launch chromium "https://youtube.com"
+
+     bindsym Ctrl+g mode "default"
+     bindsym Escape mode "default"
+}
+
+mode "firefox" {
+     bindsym a exec swaymsg mode "default" && firefox-bin --new-window "about:home"
+     bindsym s exec swaymsg mode "default" && firefox-bin --new-window "https://youtube.com"
+
+     bindsym Ctrl+g mode "default"
+     bindsym Escape mode "default"
 }
 
 # Power keybinds
@@ -250,18 +264,6 @@ mode "hide" {
      bindsym Shift+d exec $scratch move 3 f
      bindsym Shift+f exec $scratch move 4 f
      
-     bindsym g mode "hide-select"
-     bindsym Ctrl+g mode "default"
-     bindsym Escape mode "default"
-}
-
-mode "hide-select" {
-     bindsym a exec $scratch select 1 select
-     bindsym s exec $scratch select 2 select
-     bindsym d exec $scratch select 3 select
-     bindsym f exec $scratch select 4 select
-
-     bindsym g mode "hide"
      bindsym Ctrl+g mode "default"
      bindsym Escape mode "default"
 }
@@ -269,7 +271,7 @@ mode "hide-select" {
 # Bind modes
 bindsym $mod+Escape mode "apps"
 bindsym $mod+g mode "resize"
-bindsym $mod+h mode "power"
+bindsym $mod+asciitilde mode "power"
 bindsym $mod2+g mode "hide"			
 
 # Bar config
@@ -293,6 +295,7 @@ bar {
 # misc
 
 exec gentoo-pipewire-launcher
+
 input type:keyboard xkb_layout us
 input * xkb_layout caps-en
 include /etc/sway/config.d/*

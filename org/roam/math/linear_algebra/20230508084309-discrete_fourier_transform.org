@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       8bbaa36a-9222-4d7d-a540-044b011b6371
-:END:
-#+title: discrete fourier transform
-

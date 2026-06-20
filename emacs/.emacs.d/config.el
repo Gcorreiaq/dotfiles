@@ -21,6 +21,7 @@
 (global-set-key (kbd "C-c n r") 'replace-regexp)
 (global-set-key (kbd "C-<tab>") 'tab-recent)
 (global-set-key (kbd "C-S-<tab>") 'tab-next)
+(global-set-key "\C-x3" (lambda () (interactive)(split-window-horizontally) (other-window 1)))
 (setq pixel-scroll-precision-large-scroll-height 40.0)
 (pixel-scroll-mode 1)
 (good-scroll-mode 1)
@@ -108,13 +109,14 @@
   (setq org-log-done nil)
   (setq org-log-repeat nil)
   (setq org-ellipsis " ▾")
-  (setq org-directory "~/org")
-  (setq org-agenda-files '("roadmap/todo.org" "roadmap/math.org" "roadmap/comp.org" "roadmap/hardware.org" "roadmap/physics.org"))
+  ;(setq org-directory "~/org")
+  ;(setq org-agenda-files '("~/org/roam/"))
+  (setq org-agenda-files (directory-files-recursively "~/org/roam" org-agenda-file-regexp))
   (setq org-refile-targets
 	'(("archive.org" :maxlevel . 1)))
   (advice-add 'org-refile :after 'org-save-all-org-buffers)
   (setq org-todo-keywords
-	'((sequence "TODO(t)" "GOALS(g)" "BOOK(b)" "HABIT(h)" "|" "DONE(d)")))
+	'((sequence "TODO(t)" "GOALS(g)" "BOOK(b)" "HABIT(h)" "PROJECTS(p)" "|" "DONE(d)")))
 (add-to-list 'org-structure-template-alist '("em" . "src emacs-lisp"))
 :bind
 (("C-c a" . org-agenda)
@@ -156,6 +158,7 @@
 (org-roam-setup))
 
 (use-package org-roam-ui
+  :load-path "~/.emacs.d/org-roam-ui"
   :after org-roam
   :config
   (setq org-roam-ui-open-on-start nil
@@ -171,30 +174,12 @@
 (org-super-agenda-mode)
 (setq org-super-agenda-groups
 	'(
-	  (:name "Morning"
-		 :tag "morning")
-	  (:name "Do Today"
-		 :tag "do_today")
-	  (:name "Study"
-		 :tag "study")
-	  (:name "Night"
-		 :tag "night")
-	  (:name "Emacs"
-		 :tag "emacs")
 	  (:name "Search"
-		 :tag "search_misc")
+		 :tag "org_search")
 	  (:name "Questions"
-		 :tag "search_questions")
-	  (:name "Projects"
-		 :tag "projects")
-	  (:name "comp"
-		 :tag "comp_org")
-	  (:name "math"
-		 :tag "math_org")
-	  (:name "hardware"
-		 :tag "hard_org")
-	  (:name "physics"
-		 :tag "phy_org")
+		 :tag "org_question")
+	  (:name "Empty"
+		 :tag "org_empty")
 	  ))
 (setq org-agenda-remove-tags t)
 (setq org-agenda-use-time-grid nil)

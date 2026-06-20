@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       bbb9c41a-7c26-455a-b23a-4a6b9efe7a30
-:END:
-#+title: cerebellum
-

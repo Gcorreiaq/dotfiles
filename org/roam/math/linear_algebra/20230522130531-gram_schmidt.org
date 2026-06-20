@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       61455b3d-6cb7-4499-8e49-e2fc552884a1
-:END:
-#+title: gram schmidt
-

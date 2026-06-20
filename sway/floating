@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# $1 = toggle, move or select windows
+# $2 = group number (1,2,3...)
+
 if [[ -e /tmp/sway-workspc ]];then
     workspc="$(cat /tmp/sway-workspc)"
 else
@@ -7,19 +10,23 @@ else
     workspc=1
 fi
 
+# focus based on group number, used by select
 if [[ $1 = "toggle" ]];then
-    con_ids=$(swaymsg -t get_tree | jq -r '.. | select(.nodes?) | .floating_nodes[] | recurse(.nodes[]) as $parent | select($parent.marks[]? | match("^'$workspc'\\s.*") ).id' | uniq)
+    con_ids=$(swaymsg -t get_tree | jq -r '.. | select(.nodes?) | .floating_nodes[] | select(.marks[]? | match("^'$workspc'\\s.*")).id' | uniq)
     for id in $con_ids;do
 	swaymsg [con_id="$id"] scratchpad show, mark "$workspc $RANDOM"
 	swaymsg focus child
     done
+fi
 
-elif [[ $1 = "move" ]];then
+if [[ $1 = "move" ]];then
+    # get only particular focused window
     if [[ -n $3 ]];then
 	focused=$(swaymsg -t get_tree | jq -r '.. | select(.nodes?) | .floating_nodes[] | recurse(.nodes[]) as $parent | select($parent.focused==true).id')
 	swaymsg [con_id="$focused"] mark "$2 $focused", floating enable
 	swaymsg [con_mark="^$2\s.*"] move container scratchpad
     else
+	# move all floating windows to group
 	con_ids=$(swaymsg -t get_workspaces | jq -r '.[] | select(.focused==true).floating_nodes[].id')
 	for con_id in $con_ids;do
 	    swaymsg [con_id="$con_id"] mark "$2 $con_id", floating enable
@@ -27,12 +34,12 @@ elif [[ $1 = "move" ]];then
 	done
     fi
     echo $2 > /tmp/sway-workspc
-    
-elif [[ $1 = "select" ]];then
+fi
+
+# focus the group (1,2,3...) using toggle if
+if [[ $1 = "select" ]];then
     echo $2 > /tmp/sway-workspc
-    if [[ -z $3 ]];then
-	~/dotfiles/sway/floating toggle
-    fi
+    ~/dotfiles/sway/floating toggle
 fi
 
 swaymsg mode "default"

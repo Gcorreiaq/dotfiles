@@ -1,0 +1,20 @@
+
+# GUI base
+
+sys-process/btop
+sys-process/htop
+sys-process/lsof
+sys-process/iotop
+
+sys-boot/grub
+sys-fs/fuse
+sys-fs/
+
+gui-wm/sway
+
+x11-apps/xev
+x11-misc/dmenu
+x11-terms/st
+
+www-client/chromium
+www-client/firefox-bin

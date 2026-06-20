@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       6e9ed994-3827-40b6-8f7b-d90cdc1722bb
-:END:
-#+title: synaptic plasticity
-
-Synaptic plasticity is the ability of *synapses to strengthen or weaken over time*, in response to increases or decreases in their activity.

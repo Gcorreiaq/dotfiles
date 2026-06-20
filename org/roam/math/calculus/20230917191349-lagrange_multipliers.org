@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       33372719-12a1-4273-a4de-119c508e006a
-:END:
-#+title: lagrange multipliers
-
-

@@ -1,0 +1,31 @@
+#/bin/bash
+
+links="New tab
+Youtube
+"
+dmenu_ret=$(printf "$links" | ~/dotfiles/bspwm/dmenu)
+launch=chromium
+
+if [[ -z $dmenu_ret ]];then
+    exit
+fi
+
+if [[ $dmenu_ret = "Youtube" ]];then
+   link="https://youtube.com"
+fi
+
+if [[ $dmenu_ret = "New tab" ]];then
+    link="about:home"
+fi
+
+#launcher
+
+if [[ $1 = "chromium" ]];then
+    dbus-launch chromium "$link"
+    exit
+fi
+
+if [[ $1 = "firefox" ]];then
+    firefox-bin "$link"
+    exit
+fi

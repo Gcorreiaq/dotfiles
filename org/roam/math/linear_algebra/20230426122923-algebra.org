@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       6af86881-8dad-4f29-ae30-3802564de577
-:END:
-#+title: algebra
-
-- [[id:3ce080ba-0f77-482b-96c9-8f18eac6d4a4][linear algebra]]

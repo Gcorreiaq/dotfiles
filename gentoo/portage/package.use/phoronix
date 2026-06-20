@@ -1,0 +1,17 @@
+app-text/poppler cairo
+# required by media-libs/gegl-0.4.64-r1::gentoo
+# required by media-gfx/gimp-3.0.6::gentoo
+# required by @selected
+# required by @world (argument)
+>=media-libs/babl-0.1.116 lcms introspection
+# required by media-gfx/gimp-3.0.6::gentoo
+# required by @selected
+# required by @world (argument)
+>=media-libs/gegl-0.4.64-r1 lcms introspection
+# required by x11-libs/xapp-2.8.13::gentoo
+# required by sys-apps/xdg-desktop-portal-xapp-1.1.2::gentoo
+# required by xdg-desktop-portal-xapp (argument)
+>=dev-libs/libdbusmenu-16.04.0-r4 gtk3
+# required by app-benchmarks/phoronix-test-suite-9999::guru
+# required by phoronix-test-suite (argument)
+>=dev-lang/php-8.3.29 curl sockets pcntl zip gd

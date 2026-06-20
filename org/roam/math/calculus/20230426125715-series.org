@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       6b0d5cfd-bbe0-4075-8202-85851c2d412f
-:END:
-#+title: series
-

@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       eda17232-f214-4647-b560-55c7be4f9e6c
-:END:
-#+title: DNA methylation
-

@@ -1,0 +1,54 @@
+Only in swaypatched/: disable_titlebar.patch
+diff '--color=auto' -crB sway/sway/commands/focus.c swaypatched/sway/commands/focus.c
+*** sway/sway/commands/focus.c	2024-08-08 18:13:54.361502208 -0300
+--- swaypatched/sway/commands/focus.c	2024-08-08 19:08:23.944623170 -0300
+***************
+*** 343,349 ****
+  		return cmd_results_new(CMD_SUCCESS, NULL);
+  	}
+  	struct sway_node *parent = node_get_parent(&con->node);
+! 	if (parent) {
+  		seat_set_focus(seat, parent);
+  		seat_consider_warp_to_focus(seat);
+  	}
+--- 343,349 ----
+  		return cmd_results_new(CMD_SUCCESS, NULL);
+  	}
+  	struct sway_node *parent = node_get_parent(&con->node);
+! 	if (parent && parent->type != N_OUTPUT && parent->type != N_WORKSPACE) {
+  		seat_set_focus(seat, parent);
+  		seat_consider_warp_to_focus(seat);
+  	}
+diff '--color=auto' -crB sway/sway/tree/container.c swaypatched/sway/tree/container.c
+*** sway/sway/tree/container.c	2024-08-08 18:13:54.367502322 -0300
+--- swaypatched/sway/tree/container.c	2024-08-08 18:26:36.689986173 -0300
+***************
+*** 726,732 ****
+  }
+  
+  size_t container_titlebar_height(void) {
+! 	return config->font_height + config->titlebar_v_padding * 2;
+  }
+  
+  void floating_calculate_constraints(int *min_width, int *max_width,
+--- 726,732 ----
+  }
+  
+  size_t container_titlebar_height(void) {
+! 	return 0;
+  }
+  
+  void floating_calculate_constraints(int *min_width, int *max_width,
+diff '--color=auto' -crB sway/sway/tree/view.c swaypatched/sway/tree/view.c
+*** sway/sway/tree/view.c	2024-08-08 18:13:54.367502322 -0300
+--- swaypatched/sway/tree/view.c	2024-08-08 18:12:51.804313642 -0300
+***************
+*** 315,320 ****
+--- 315,321 ----
+  		list_t *siblings = container_get_siblings(con);
+  		bool show_titlebar = (siblings && siblings->length > 1)
+  			|| !config->hide_lone_tab;
++ 		show_titlebar = 0;
+  		if (show_titlebar) {
+  			enum sway_container_layout layout = container_parent_layout(con);
+  			if (layout == L_TABBED) {

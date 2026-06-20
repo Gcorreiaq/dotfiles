@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       508465dd-7aaa-406f-b63b-de5669884322
-:END:
-#+title: covariance matrix
-
-Covariance matrix is a *square matrix* giving the [[id:ddb3f346-eff1-4de0-90c5-77278c589cc1][covariance]] between each pair of elements of a given random vector.
-
-Any covariance matrix is *symmetric* and *positive semi definite* and its main diagonal contains *variances*.

@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       1c6c7a06-fafc-4d3f-9eae-eb0f17a78f9b
-:END:
-#+title: analysis
-
-Analysis is the branch of mathematics dealing with *continuous functions, limits, nd related theories, such as differentiation, integration, measure, infinite sequences, [[id:6b0d5cfd-bbe0-4075-8202-85851c2d412f][series]], and analytic functions*.

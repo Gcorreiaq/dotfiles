@@ -1,0 +1,6 @@
+xkb_symbols "basic" {
+	    include "us"
+	    name[Group1] = "us custom";
+	    key <CAPS> { [ Hyper_L ] };
+	    modifier_map Mod5 { Hyper_L };
+};	    

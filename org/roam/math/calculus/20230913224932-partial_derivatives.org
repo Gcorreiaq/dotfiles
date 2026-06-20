@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       235ec1fe-4083-40e4-a608-6aafc2bbe2ee
-:END:
-#+title: partial derivatives
-

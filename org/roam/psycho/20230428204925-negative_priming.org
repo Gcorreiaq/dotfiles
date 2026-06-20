@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       e7f004da-acff-4139-8030-52254b179fbf
-:END:
-#+title: negative priming
-
-A [[id:29a54fd4-8c12-4a76-88a6-5df87b6da598][positive prime]] speeds up processing, while a negative prime *lowers the speed* to slower than un-primed levels. Negative priming is caused by experiencing the stimulus, and then *ignoring it*.
-
-See https://doi.org/10.1027/0044-3409.215.1.35 for the possible causes.

@@ -26,7 +26,7 @@ prepare() {
     
     # Copy wallpaper so it can be used in theme  
     background_image="images/theme_ntp_background_norepeat.png"
-    cp "$wallpaper" "$THEME_DIR/$background_image"
+    cp "$1" "$THEME_DIR/$background_image"
 
 }
 
@@ -68,6 +68,6 @@ generate() {
 EOF
 }
 
-prepare
+prepare $1
 generate
 echo "Pywal Chrome theme generated at $THEME_DIR"

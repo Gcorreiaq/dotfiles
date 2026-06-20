@@ -8,7 +8,10 @@ con_ids_hidden=$(swaymsg -t get_workspaces | jq -r '.[] | select(.name=='\"float
 if [[ $1 = "hide" ]];then
     if [[ $2 = "focused" ]];then
 	swaymsg [floating con_id=__focused__] move container to workspace "floating$workspc"
+	focused=$(swaymsg -t get_workspaces | jq -r '.[] | select(.focused==true).floating_nodes[] | select(.focused==true).id')
+	echo $focused > /tmp/sway-floating$workspc
     else
+	echo $(swaymsg -t get_workspaces | jq -r '.[] | select(.focused==true).floating_nodes[] | select(.focused==true).id') > /tmp/sway-floating$workspc
 	for con_id in $con_ids;do
 	    swaymsg [con_id="$con_id"] move container to workspace "floating$workspc"
 	done
@@ -18,10 +21,14 @@ if [[ $1 = "hide" ]];then
 elif [[ $1 = "show" ]];then
     for con_id_h in $con_ids_hidden;do
 	swaymsg [con_id="$con_id_h"] move container to workspace "$workspc"
-	swaymsg focus floating
     done
+    swaymsg focus floating
+    focused=$(cat /tmp/sway-floating$workspc)
+    swaymsg [con_id="$focused"] focus
     toggle="hide"
 fi
+
 swaymsg focus floating
+swaymsg [con_id=__focused__] focus
 swaymsg mode "default"
 swaymsg bindsym Mod5+c exec ~/dotfiles/sway/toggle_floating "$toggle"

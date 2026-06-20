@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       7251e97a-1848-4100-aad5-8faf8d379cc1
-:END:
-#+title: perceptual priming
-
-Perceptual priming is based on the *form of the stimulus* and is enhanced by the match between the early and later stimuli. An example of perceptual priming is the identification of an incomplete word in a word-stem completion test.
-
-Perceptual priming can be seen as *items with a similar form* are primed.

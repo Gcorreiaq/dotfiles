@@ -2,6 +2,18 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/g/dotfiles/emacs/.emacs.d/elpa/" . "ewal-spacemacs-themes-20230505.609/")
+ ("/home/g/dotfiles/emacs/.emacs.d/" . "elpa/")
+ ("/home/g/Downloads/tabextension/maomempcdmkfcjgeabecfpkebghcigac/a/dist/" . "ui/")
+ ("/home/g/Downloads/tabextension/maomempcdmkfcjgeabecfpkebghcigac/a/" . "dist/")
+ ("/home/g/Downloads/tabextension/maomempcdmkfcjgeabecfpkebghcigac/3.5.3_0/dist/" . "ui/")
+ ("/home/g/Downloads/tabextension/maomempcdmkfcjgeabecfpkebghcigac/3.5.3_0/" . "dist/")
+ ("/home/g/Downloads/tabextension/maomempcdmkfcjgeabecfpkebghcigac/" . "a/")
+ ("/home/g/Downloads/tabextension/" . "maomempcdmkfcjgeabecfpkebghcigac/")
+ ("/home/g/Downloads/" . "tabextension/")
+ ("/home/g/facul/" . "super_trunfo/")
+ ("/home/g/.config/mpv/scripts/" . "subs2srs/")
+ ("/home/g/.config/mpv/" . "scripts/")
  ("/home/g/git/portfolio/" . "blog/")
  ("/etc/portage/patches/gui-wm/" . "sway/")
  ("/etc/portage/patches/" . "gui-wm/")
@@ -10,7 +22,7 @@
  ("/" . "etc/")
  ("/home/g/org/books/" . "ltximg/")
  ("/home/g/.xkb/" . "symbols/")
- ("/home/g/dotfiles/" . "sway/")
+ ("/home/g/dotfiles/" . "bspwm/")
  ("/home/g/.config/" . "sway/")
  ("/home/g/git/algorithms/c/" . "quicksort/")
  ("/home/g/git/algorithms/" . "c/")
@@ -29,37 +41,53 @@
  ("/home/g/.local/" . "bin/")
  ("/home/g/git/lastfm-collage-generator/src/" . "lastfmcollagegenerator/")
  ("/home/g/git/lastfm-collage-generator/" . "src/")
- ("/home/g/git/" . "portfolio/")
+ ("/home/g/git/" . "algorithms/")
  ("/home/tg/.local/lib/python3.12/site-packages/" . "lastfmcollagegenerator/")
  ("/home/tg/.local/lib/python3.12/" . "site-packages/")
  ("/home/tg/.local/lib/" . "python3.12/")
  ("/home/tg/.local/" . "lib/")
  ("/home/tg/" . ".local/")
  ("/home/" . "g/")
- ("/home/g/.emacs.d/elpa/" . "org-download-20220906.1929/")
+ ("/home/g/.emacs.d/elpa/" . "ewal-spacemacs-themes-20230505.609/")
  ("/home/g/.emacs.d/" . "elpa/")
  ("/home/g/code/c/" . "sorting/")
  ("/home/g/code/" . "c/")
- ("/home/g/" . ".local/")
+ ("/home/g/" . "dotfiles/")
  ("/home/g/org/" . "roadmap/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
- "/home/g/.local/bin/"
- "/home/g/org/roadmap/"
+ "/home/g/dotfiles/sway/"
+ "/home/g/dotfiles/bspwm/"
+ "/home/g/.config/sway/"
+ "/home/g/git/algorithms/c/"
+ "/home/g/org/roam/hardware/cpu_degradation/"
+ "/home/g/.xkb/symbols/"
  "/home/g/"
+ "/home/g/org/roadmap/"
+ "/home/g/.local/bin/"
+ "/home/g/dotfiles/emacs/.emacs.d/"
+ "/home/g/dotfiles/emacs/.emacs.d/elpa/ewal-spacemacs-themes-20230505.609/"
+ "/home/g/dotfiles/emacs/.emacs.d/elpa/ewal-20200305.230/"
+ "/home/g/.emacs.d/elpa/ewal-spacemacs-themes-20230505.609/"
+ "/home/g/Downloads/tabextension/maomempcdmkfcjgeabecfpkebghcigac/a/"
+ "/home/g/Downloads/tabextension/maomempcdmkfcjgeabecfpkebghcigac/a/dist/ui/"
+ "/home/g/Downloads/tabextension/maomempcdmkfcjgeabecfpkebghcigac/3.5.3_0/dist/ui/"
+ "/home/g/Downloads/"
+ "/home/g/Downloads/tabextension/maomempcdmkfcjgeabecfpkebghcigac/3.5.3_0/dist/service-worker/"
+ "/home/g/Downloads/tabextension/maomempcdmkfcjgeabecfpkebghcigac/3.5.3_0/dist/side-panel/"
+ "/home/g/Downloads/tabextension/maomempcdmkfcjgeabecfpkebghcigac/3.5.3_0/"
+ "/home/g/dotfiles/"
+ "/home/g/facul/super_trunfo/"
+ "/home/g/.config/mpv/scripts/subs2srs/"
+ "/home/g/dotfiles/ChromiumPywal/"
  "/home/g/org/journal/"
  "/home/g/git/portfolio/blog/"
  "/etc/portage/patches/gui-wm/sway/"
- "/home/g/dotfiles/sway/"
- "/home/g/dotfiles/bspwm/"
  "/home/g/org/books/"
- "/home/g/.config/sway/"
- "/home/g/git/algorithms/c/"
  "/home/g/git/algorithms/c/quicksort/"
  "/home/g/dotfiles/org/roadmap/"
- "/home/g/.xkb/symbols/"
  "/home/g/git/Zathura-Pywal/"
  "/home/g/.config/zathura/"
  "/home/g/git/sway/include/sway/"
@@ -84,35 +112,121 @@
 
 ;; ----- ido-work-file-list -----
 (
- "sw"
- "comp.org"
- "monastery.org"
- "todo.org"
- "temp.org"
- "20240621"
- "app.js"
- "fullscreen.patch"
- "colors"
+ "toggle_floating"
+ "floating"
+ "tab_focus"
+ "move_float"
+ "focus_parent"
  "setkmap"
+ "launch"
+ "chromium_link"
+ "dmenu_run"
+ "dmenu"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/g/" (26530 55277 723330 274000) ".elfeed/" "git/" ".themes/" ".dbus/" "temp/" ".gitconfig" "../" "./" "last.py" ".bash_history" ".mplayer/" ".bash_profile" "install-amd64-minimal-20250119T170328Z.iso" ".bash_history-05512.tmp" ".java/" ".cache/" ".minecraft/" "Win10_22H2_English_x64v1.iso" ".xinitrc" ".bash_history-02609.tmp" ".config/" ".npm/" ".bash_history-04914.tmp" "firmware-security-training/" "dotfiles/" ".bash_history-01766.tmp" ".xkb/" ".mozilla/" "dict/" ".bash_history-02108.tmp" "ventoy-1.0.99/" ".bash_history-06217.tmp" ".pki/" ".tlauncher/" ".ssh/" ".anthy/" ".fehbg" ".bash_history-02158.tmp" "Downloads" "images/" "org/" ".yarn/" "ventoy-1.0.99-linux.tar.gz" ".bash_history-17340.tmp" ".emacs.d/" "wayneko/" ".bashrc" "obsidian/" "temp.org" ".local/")
+ ("/home/g/dotfiles/sway/" (27189 61834 568239 88000) "./" "bar" "../" "toggle_floating" "chromium_link" "config" "floating" "launch" "move_float" "tab_focus" "colors")
+
+ ("/home/g/dotfiles/ChromiumPywal/" (27189 23775 826336 694000) "./" "../" "chromium_config" "generate-theme.sh" "Pywal/")
+
+ ("/home/g/Downloads/" (27189 23579 228730 150000) "./" "subc-2022.zip" "../" "STScI-01JTRMSKTGGGHQSTGCNQ63CP1C.png" "Telegram Desktop/" "Currículo.pdf" "vial.vil" "psnpp-plats.json" "doc/" "vial-new" "NT_IPsec_EN.pdf" "art002e010014~orig.jpg" "org-roam-ui-main.zip" "PE_Fund_Redes.pdf" "vial" "electromigration.png" "curriculo gabriel.pdf" "ventoy/" "psnpp-plat-now.png" "anki/" "psnpp-plat-now.json" "STG-backups-FF-147.0.3/" "tabextension/" "psnpp-plats.png" "Full Res (For Display).png" "tabxpert-main-2025-12-08_16-13.dat" "Full Res -watermarked - Artist's Concept (For Print).tif" "art002e012632~orig.jpg" "art002e021296~orig.jpg")
+
+ ("/home/g/.local/bin/" (27189 23597 611600 183000) "sw" "./" "whph-dir/" "obsidian-run" "anki25/" "../" "g" "Telegram/" "gnuplot-memory" "minecraft" "find_last" "gnuplot-temperature" "topp" "genzathurarc" "pywalfox" "httpx" "tlauncher/" "tg" "wal" "vial" "ngrok" "wpg" "anki" "anki_server" "lorien" "whph" "excalidraw" "obsidian/" "zathura")
+
+ ("/home/g/.config/" (27175 7837 166289 648000) "./" "seergdb/" "filezilla/" "../" "gnuplot/" "procps/" "QtProject.conf" "qBittorrent/" "gtk-3.0/" "mozc/" "keepassxc/" "pulse/" "chromium/" "ibus/" "pavucontrol.ini" "fontconfig/" "goldendict/" "BraveSoftware/" "rc/" "mimeapps.list" "htop/" "btop/" "wal/" "dconf/" "autostart/" "sxhkd/" "bspwm/" "sway/" "ngrok/" "wpg/" "mpv/" "xournalpp/" "neofetch/" "obsidian/" "Vial/" "zathura/" "ranger/")
+
+ ("/home/g/.emacs.d/" (27174 43596 767002 277000) "url/" "./" "../" "config.el" "ido.last" "fontpreview-mode.el" "nov-places" "tutorial/" "bookmarks" "theme.el" "init.el" "games/" "recentf.eld" "org-roam.db" "auto-save-list/" "org-download.el" "org-roam-ui/" "eshell/" "ss.PNG" "config.org" "ss-error.PNG" "elpa/" "persist/" ".org-id-locations" "transient/" "theme.org")
+
+ ("/home/g/dotfiles/emacs/.emacs.d/" (27174 43596 767002 277000) "url/" "./" "../" "config.el" "ido.last" "fontpreview-mode.el" "nov-places" "tutorial/" "bookmarks" "theme.el" "init.el" "games/" "recentf.eld" "org-roam.db" "auto-save-list/" "org-download.el" "org-roam-ui/" "eshell/" "ss.PNG" "config.org" "ss-error.PNG" "elpa/" "persist/" ".org-id-locations" "transient/" "theme.org")
+
+ ("/home/g/" (27175 54749 335536 135000) "./" ".fehbg" "hd/" "dotfiles/" ".config/" "temp-gentoo2" ".bash_history" "Downloads/" "../" ".elfeed/" ".xinitrc" ".local/" ".themes/" ".anthy/" ".ssh/" ".python_history" "keepass/" "git/" ".gitconfig" ".bashrc" "images/" "openssf.tar" ".bash_logout" ".dbus/" "temp-last-llvm2" ".yarn/" ".emacs.d/" "temp-gnuplot" ".xkb/" ".ddd/" ".pki/" "world" ".mozilla/" "temp-last-llvm" "org/" ".java/" "phone/" "dict/" ".npm/" ".syncserver/" ".tlauncher/" "best.openssf.org/" ".phoronix-test-suite/" "temp-chromium" ".cache/" ".minecraft/" "obsidian/" ".wget-hsts" "temp-last-llvm3" "last.py" ".bash_profile" "anki_sync/" ".mplayer/")
+
+ ("/home/g/org/" (27058 44413 275416 807000) "./" "../" "roam/" "journal/" "tasks/" ".gitignore" "books/" "elfeed.org" ".stfolder/" "roadmap/")
+
+ ("/home/g/org/roam/" (27171 23908 210963 620000) "./" "../" "comp/" "psycho/" "hardware/" "math/" "2023-04-26_14-20-35_screenshot.png" "2023-05-16_21-29-40_paste-996edcea5854c02b9d5103217f50f93e2cc6d015.jpg" "2023-04-29_13-02-30_screenshot.png" "20240713142658-goals.org" "2023-04-27_15-17-26_paste-6092c9483ff0ebb56a0b8c48db7b0beeb52cb967.jpg" "2023-05-16_10-20-09_screenshot.png" "languages/" "2023-04-27_14-50-06_screenshot.png" "physics/" "20260605202500-chemical_mechanical_polishing.org" "2023-05-12_19-28-40_screenshot.png")
+
+ ("/home/g/org/roam/hardware/" (27171 16112 777753 240000) "./" "../" "20260605175113-thermal_annealing.org" "cpu_degradation/")
+
+ ("/home/g/org/roam/hardware/cpu_degradation/" (27171 16321 590093 937000) "./" "Consequences/" "2026-03-20_00-14-12_screenshot.png" "../" "Electromigration_Quantification_and_Black_equation_https/" "2026-03-12_09-39-40_screenshot.png" "DB_in_finfet/" "EM_prevention_measures/" "Traps/" "Electromigration/" "EM_prevention/" "2026-03-16_23-42-10_screenshot.png" "20260312092501-oxide_breakdown.org" "20260331021435-electromigration.org" "2026-03-13_17-22-07_screenshot.png" "Circuit_analysis_for_electromigration/" "Design_parameters/" "2026-03-13_15-33-07_screenshot.png")
+
+ ("/home/g/dotfiles/emacs/" (26535 54816 160890 522000) "./" "../" "init.el" "config.org" ".emacs.d/" "latex-preview-pane/")
+
+ ("/home/g/.xkb/" (26574 5960 253891 605000) "./" "../" "symbols/")
+
+ ("/home/g/git/" (27043 11458 53307 311000) "./" "../" "lastfm-collage-generator/" "p-repo/" "goldendict/" "ryzen/" "sway/" "Zathura-Pywal/" "algorithms/")
+
+ ("/home/g/dotfiles/" (27058 44252 57485 746000) "./" "../" "xorg/" "gentoo/" "alacritty/" "installer" ".bashrc" "kernel/" ".gitignore" "backup.sh" "fontconfig/" "htop/" "misc/" "emacs/" "ChromiumPywal/" ".xkb/" "wal/" "sxhkd/" "bspwm/" "sway/" "polybar/" "README.md" "picom/" "neofetch/" ".stfolder/" ".git/" "zathura/" "ranger/")
+
+ ("/home/g/org/roadmap/" (27058 44403 878479 115000) "./" "../" "langs.org" "articles.org" "monastery.org" "ask.org" "todo.org")
+
+ ("/home/g/.phoronix-test-suite/" (27020 31833 702929 183000) "./" "test-suites/" "modules-data/" "test-profiles/" "../" "installed-tests/" "graph-config.json" "modules/" "user-config.xml" "core.pt2so" "run-lock-21876" "openbenchmarking.org/" "phoronix-test-suite-dependencies.log" "test-results/" "download-cache/" "result_viewer_lock")
+
+ ("/home/g/.emacs.d/elpa/org-download-20220906.1929/" (27020 40595 991531 30000) "./" "../" "org-download.el" "org-download.elc" "org-download-pkg.el" "org-download-autoloads.el")
+
+ ("/home/g/dotfiles/org/roadmap/" (27020 32885 716657 328000) "./" "../" "langs.org" "articles.org" "monastery.org" "ask.org" "todo.org" ".stfolder/")
+
+ ("/home/g/.emacs.d/elpa/ewal-spacemacs-themes-20230505.609/" (27020 40596 472526 707000) "./" "../" "ewal-spacemacs-modern-theme.elc" "ewal-spacemacs-themes-autoloads.el" "ewal-spacemacs-classic-theme.elc" "ewal-spacemacs-themes.el" "ewal-spacemacs-themes-pkg.el" "ewal-spacemacs-classic-theme.el" "ewal-spacemacs-modern-theme.el" "ewal-spacemacs-themes.elc")
+
+ ("/home/g/dotfiles/emacs/.emacs.d/elpa/ewal-20200305.230/" (27020 40596 481526 626000) "./" "palettes/" "../" "ewal.elc" "ewal.el" "ewal-autoloads.el" "ewal-pkg.el")
+
+ ("/home/g/dotfiles/emacs/.emacs.d/elpa/ewal-spacemacs-themes-20230505.609/" (27020 40596 472526 707000) "./" "../" "ewal-spacemacs-modern-theme.elc" "ewal-spacemacs-themes-autoloads.el" "ewal-spacemacs-classic-theme.elc" "ewal-spacemacs-themes.el" "ewal-spacemacs-themes-pkg.el" "ewal-spacemacs-classic-theme.el" "ewal-spacemacs-modern-theme.el" "ewal-spacemacs-themes.elc")
+
+ ("/home/g/dotfiles/org/roam/comp/algorithms/" (26302 26751 283166 443000) "./" "../" "20240529014641-algorithms.org" "20240524152342-merge_sort.org" "20240529014724-insertion_sort.org" "algorithms.excalidraw" "Heapsort/" "20240524163457-divide_and_conquer_algorithms.org" "20240715130431-heapsort.org" "Heaps/" "20240524163311-recurrence.org")
+
+ ("/home/g/.emacs.d/elpa/" (26570 11488 902525 322000) "./" "avy-20230420.404/" "which-key-20240620.2145/" "elfeed-org-20231009.1125/" "ripgrep-20220520.1410/" "consult-20250216.1447/" "org-roam-ui-20221105.1040/" "../" "compat-30.0.0.0/" "ht-20230703.558/" "org-super-agenda-20240630.18/" "s-20220902.1511/" "ts-20220822.2313/" "good-scroll-20211101.942/" "rmsbolt-20240622.1704/" "gnupg/" "dash-20240510.1327/" "websocket-20230809.305/" "wgrep-20230203.1214/" "simple-httpd-20230821.1458/" "calfw-cal-20170411.220/" "calfw-org-20170411.220/" "swiper-20240520.1202/" "ewal-spacemacs-themes-20230505.609/" "rg-20241221.1420/" "org-journal-20240218.1645/" "ewal-20200305.230/" "org-download-20220906.1929/" "ace-window-20220911.358/" "elfeed-20240331.1348/" "spacemacs-theme-20240715.1440/" "compat-30.0.0.0.signed" "emacsql-20240714.1824/" "org-roam-20240715.1750/" "async-20240714.709/" "magit-section-20240713.1925/" "archives/" "ido-vertical-mode-20210205.436/" "org-bullets-20200317.1740/" "ivy-20240524.1139/" "calfw-20180118.45/")
+
+ ("/home/g/dotfiles/emacs/.emacs.d/elpa/" (26570 11488 902525 322000) "./" "avy-20230420.404/" "which-key-20240620.2145/" "elfeed-org-20231009.1125/" "ripgrep-20220520.1410/" "consult-20250216.1447/" "org-roam-ui-20221105.1040/" "../" "compat-30.0.0.0/" "ht-20230703.558/" "org-super-agenda-20240630.18/" "s-20220902.1511/" "ts-20220822.2313/" "good-scroll-20211101.942/" "rmsbolt-20240622.1704/" "gnupg/" "dash-20240510.1327/" "websocket-20230809.305/" "wgrep-20230203.1214/" "simple-httpd-20230821.1458/" "calfw-cal-20170411.220/" "calfw-org-20170411.220/" "swiper-20240520.1202/" "ewal-spacemacs-themes-20230505.609/" "rg-20241221.1420/" "org-journal-20240218.1645/" "ewal-20200305.230/" "org-download-20220906.1929/" "ace-window-20220911.358/" "elfeed-20240331.1348/" "spacemacs-theme-20240715.1440/" "compat-30.0.0.0.signed" "emacsql-20240714.1824/" "org-roam-20240715.1750/" "async-20240714.709/" "magit-section-20240713.1925/" "archives/" "ido-vertical-mode-20210205.436/" "org-bullets-20200317.1740/" "ivy-20240524.1139/" "calfw-20180118.45/")
+
+ ("/home/g/Downloads/tabextension/maomempcdmkfcjgeabecfpkebghcigac/a/dist/ui/" (26638 22472 0 0) "./" "271.js" "380.js" "725.js" "../" "111.js" "477.js" "710.js" "app-options.js" "libs-ui.js" "366.js" "113.js" "237.js" "420.js" "app-onboarding.js" "207.js" "loader-popup.js" "220.js" "shared-ui.css" "635.js" "530.js" "553.js" "403.js" "579.js" "loader-tab.js" "474.js" "runtime.js" "7.js" "639.js" "loader-onboarding.js" "759.js" "700.js" "855.js" "640.js" "652.js" "loader-window.js" "162.js" "shared-ui.js" "792.js" "app-ui.js" "49.js" "650.js" "321.js" "58.js" "304.js" "513.js" "657.js" "730.js" "586.js" "932.js")
+
+ ("/home/g/Downloads/tabextension/maomempcdmkfcjgeabecfpkebghcigac/a/dist/" (26638 22472 0 0) "./" "../" "chinese.json" "ui/" "service-worker/" "offscreen/" "search-worker/" "db-worker/" "side-panel/")
+
+ ("/home/g/Downloads/tabextension/maomempcdmkfcjgeabecfpkebghcigac/a/" (26936 25669 64198 718000) "./" "icon128.png" "window.html" "offscreen.html" "../" "dist/" "manifest.fingerprint" "index.html" "action.html" "_locales/" "worker.js" "popup.html" "themes/" "onboarding.html" "manifest.json" "js/" "options.html" "sidepanel.html" "icon48.png" "icon16.png")
+
+ ("/home/g/Downloads/tabextension/maomempcdmkfcjgeabecfpkebghcigac/" (26936 25662 392852 682000) "./" "../" "3.5.3_0.pem" "3.5.3_0.zip" "a/")
+
+ ("/home/g/Downloads/tabextension/maomempcdmkfcjgeabecfpkebghcigac/3.5.3_0/dist/ui/" (26638 11673 975570 767000) "./" "271.js" "380.js" "725.js" "../" "111.js" "477.js" "710.js" "app-options.js" "libs-ui.js" "366.js" "113.js" "237.js" "420.js" "app-onboarding.js" "207.js" "loader-popup.js" "220.js" "shared-ui.css" "635.js" "530.js" "553.js" "403.js" "579.js" "loader-tab.js" "474.js" "runtime.js" "7.js" "639.js" "loader-onboarding.js" "759.js" "700.js" "855.js" "640.js" "652.js" "loader-window.js" "162.js" "shared-ui.js" "792.js" "app-ui.js" "49.js" "650.js" "321.js" "58.js" "304.js" "513.js" "657.js" "730.js" "586.js" "932.js")
+
+ ("/home/g/Downloads/tabextension/maomempcdmkfcjgeabecfpkebghcigac/3.5.3_0/dist/service-worker/" (26638 11673 975570 767000) "./" "app-service-worker.js" "../" "libs-service-worker.js" "shared-service-worker.js" "runtime.js")
+
+ ("/home/g/Downloads/tabextension/maomempcdmkfcjgeabecfpkebghcigac/3.5.3_0/dist/side-panel/" (26638 11673 978570 801000) "./" "380.js" "715.js" "../" "111.js" "libs-sidepanel.js" "723.js" "366.js" "195.js" "816.js" "113.js" "237.js" "loader-sidepanel.js" "614.js" "220.js" "635.js" "530.js" "403.js" "579.js" "runtime.js" "7.js" "759.js" "700.js" "275.js" "270.js" "652.js" "162.js" "567.js" "app-sidepanel.js" "792.js" "321.js" "58.js" "shared-sidepanel.css" "304.js" "657.js" "730.js" "586.js" "932.js" "shared-sidepanel.js")
+
+ ("/home/g/Downloads/tabextension/maomempcdmkfcjgeabecfpkebghcigac/3.5.3_0/dist/" (26638 11673 971570 719000) "./" "../" "chinese.json" "ui/" "service-worker/" "offscreen/" "search-worker/" "db-worker/" "side-panel/")
+
+ ("/home/g/Downloads/tabextension/maomempcdmkfcjgeabecfpkebghcigac/3.5.3_0/" (26935 9987 782124 926000) "./" "icon128.png" "window.html" "offscreen.html" "../" "dist/" "manifest.fingerprint" "index.html" "action.html" "_locales/" "worker.js" "popup.html" "themes/" "onboarding.html" "manifest.json" "js/" "options.html" "sidepanel.html" "icon48.png" "icon16.png")
+
+ ("/home/g/Downloads/tabextension/" (26843 8123 376823 20000) "./" "../" "3.5.3_0.pem" "3.5.3_0.crx" "maomempcdmkfcjgeabecfpkebghcigac/")
+
+ ("/home/g/git/algorithms/c/" (26683 23704 447062 784000) "./" "create_array.c" "../" "counting.c" "array.c" "quicksort/" "counting.h" "command.h" "command.c" "test.c" "test.h" "array.h")
+
+ ("/home/g/git/algorithms/" (26683 24046 689198 179000) "./" "../" "c/" ".git/")
+
+ ("/home/g/facul/super_trunfo/" (26682 24196 425257 211000) "../" "./" ".git/" "README.md" "st" "super" "super_trunfo.c")
+
+ ("/home/g/facul/" (26670 28165 588565 586000) "../" "./" "super_trunfo/")
+
+ ("/home/g/org/tasks/" (26294 33462 465291 312000) "../" "./" "tasks.org" "birth.org")
+
+ ("/home/g/.config/mpv/scripts/subs2srs/" (26581 65042 98109 989000) "howto/" "platform/" "../" "cfg_mgr.lua" "./" ".gitignore" ".git/" "README.md" "ankiconnect.lua" "find_anki_col.sh" "utils/" "subs2srs.lua" "menu.lua" "encoder/" "subtitles/" "main.lua" "test.lua" "LICENSE" "osd_styler.lua" "Makefile" "helpers.lua" ".github/")
+
+ ("/home/g/.config/mpv/scripts/" (26581 65031 787897 773000) "../" "./" "subs2srs/")
+
+ ("/home/g/.config/mpv/" (26582 244 278303 830000) "../" "./" "scripts/" "script-opts/")
+
+ ("/home/g/temp/" (26550 28815 768258 981000) "git" "OS" "devops-sysadmin" "../" "math 2" "./" "philosophy" "courses" "editor" "prog" "audio production" "electronics" "embedded" "psycho" "wayland" "math" "lang" "misc" "lisp" "linux" "automata" "AI" "zzz-to-see" "resources" "japanese" "overclocking" "signal processing" "forensics" "articles" "hacking" "c-cpp" "gentoo" "reversing" "study" "hardware" "music" "comp-arch" "physics" "emacs" "car tuning" "webdev" "code" "crypto" "hacking-gaming" "malware" "russian" "math 3" "hacking-hardware" "tools" "info-theory" "drawing")
+
+ ("/home/g/dotfiles/alacritty/" (26294 29423 441551 222000) "../" "./" "alacritty.toml" "alacritty.yml")
+
+ ("/home/g/.xkb/symbols/" (26508 24516 410413 727000) "caps-ru" "../" "./" "caps-br" "caps-en")
+
+ ("/home/g/org/journal/" (26495 12058 659422 571000) "../" "./" "20240621" "20250107" "20241211")
 
  ("/home/g/dotfiles/org/journal/" (26458 20288 35217 159000) "../" "./" "20240621" "20241211")
-
- ("/home/g/org/journal/" (26294 33462 458291 179000) "../" "./" "20240621")
-
- ("/home/g/.emacs.d/" (26435 18615 949374 113000) "config.org" "ss.PNG" "../" "./" "init.el" "games/" "fontpreview-mode.el" "nov-places" ".org-id-locations" "transient/" "ss-error.PNG" "elpa/" "theme.el" "eshell/" "persist/" "bookmarks" "config.el" "theme.org" "url/" "ido.last" "auto-save-list/" "org-download.el" "org-roam.db" "tutorial/")
-
- ("/home/g/.local/bin/" (26424 45503 309785 319000) "../" "./" "wal" "tg" "find_last" "pomatez" "zathura" "pomatez-bin/" "anki-dir/" "genzathurarc" "excalidraw-git/" "anki" "minecraft" "wpg" "lorien" "Telegram/" "excalidraw" "tlauncher/" "g" "sw" "httpx")
 
  ("/home/g/git/portfolio/blog/" (26450 27901 104314 858000) "schemes/" "../" "./" "app.js" "public/" "views/" "routes/" "node_modules/" "controllers/" "posts/" "package.json" "package-lock.json" "bin/")
 
  ("/home/g/git/portfolio/" (26450 27901 104314 858000) "../" "./" ".git/" "locallibrary/" "blog/")
-
- ("/home/g/git/" (26450 27895 580267 894000) "../" "./" "sway/" "algorithms/" "portfolio/" "p-repo/" "Zathura-Pywal/" "lastfm-collage-generator/" "goldendict/")
 
  ("/etc/portage/patches/gui-wm/sway/" (26294 55409 814410 918000) "./" "../" "disable_titlebar.patch" "fullscreen.patch" "focus_container.patch")
 
@@ -128,21 +242,11 @@
 
  ("/home/g/.config/sway/" (26294 30081 678057 506000) "../" "./" "config")
 
- ("/home/g/.config/" (26388 38176 556864 407000) "pulse/" "../" "./" "dconf/" "wal/" "seergdb/" "gtk-3.0/" "sway/" "sxhkd/" "fontconfig/" "pomatez/" "zathura/" "btop/" "neofetch/" "xournalpp/" "pavucontrol.ini" "wpg/" "ranger/" "goldendict/" "bspwm/" "htop/" "mpv/" "chromium/" "mimeapps.list" "QtProject.conf")
-
- ("/home/g/git/algorithms/c/" (26365 42400 130598 410000) "counting.c" "../" "./" "array.h" "test.h" "create_array.c" "command.h" "array.c" "a" "counting.h" "quicksort/" "create" "command.c" "test.c" "array")
-
- ("/home/g/.xkb/symbols/" (26352 49973 649457 684000) "caps-ru" "../" "./" "caps-en")
-
- ("/home/g/.xkb/" (26295 27785 729531 577000) "../" "./" "symbols/")
-
  ("/home/g/dotfiles/sxhkd/" (26294 29423 562553 524000) "../" "./" "sxhkdrc")
 
  ("/home/g/git/lastfm-collage-generator/src/lastfmcollagegenerator/" (26323 20857 241804 473000) "__init__.py" "../" "./" "fonts/" "collage.py" "constants.py" "__pycache__/" "lastfm/" "collage_generator.py")
 
  ("/home/g/git/lastfm-collage-generator/" (26323 20772 77187 709000) "../" "./" "pyproject.toml" ".gitignore" "MANIFEST.in" "setup.cfg" "tests/" ".git/" "README.md" "src/" "LICENSE")
-
- ("/home/g/dotfiles/" (26311 31501 305634 602000) "../" "./" ".gitignore" "wal/" ".git/" "README.md" "sway/" "misc/" "sxhkd/" "fontconfig/" "zathura/" "installer" "polybar/" "ChromiumPywal/" "ranger/" "emacs/" "bspwm/" "org/" "picom/" "portage/" "alacritty/" "xorg/" "kernel/")
 
  ("/home/g/dotfiles/bspwm/" (26294 29423 441551 222000) "temp" "center_window" "../" "./" "tesseract" "toggle_layer" "dmenu" "toggle_border_width" "kill_window" "toggle_floating_window" "toggle_tiled_window" "dmenu_run" "notification_info" "xclip" "resize_window" "marked_nodes" "list_hidden_windows" "ranger" "bspwmrc" "setkmap" "nodes")
 
@@ -174,13 +278,7 @@
 
  ("/home/g/git/algorithms/c/quicksort/" (26303 44779 926496 636000) "../" "./" "quick.h" "quick.c")
 
- ("/home/g/git/algorithms/" (26303 44711 899863 239000) "../" "./" "c/")
-
  ("/home/g/org/roam/comp/" (26294 33462 459291 198000) "../" "./" "algorithms/" "automata_theory/")
-
- ("/home/g/org/roam/" (26294 33462 465291 312000) "2023-04-27_15-17-26_paste-6092c9483ff0ebb56a0b8c48db7b0beeb52cb967.jpg" "../" "./" "languages/" "psycho/" "math/" "2023-05-12_19-28-40_screenshot.png" "2023-04-27_14-50-06_screenshot.png" "20240713142658-goals.org" "physics/" "2023-04-26_14-20-35_screenshot.png" "2023-05-16_10-20-09_screenshot.png" "comp/" "2023-04-29_13-02-30_screenshot.png" "2023-05-16_21-29-40_paste-996edcea5854c02b9d5103217f50f93e2cc6d015.jpg")
-
- ("/home/g/dotfiles/org/roadmap/" (26294 33462 458291 179000) "physics.org" "../" "./" "comp.org" "langs.org" "monastery.org" "todo.org" "hardware.org" "ask.org" "articles.org" "math.org")
 
  ("/home/g/dotfiles/org/" (26294 33462 465291 312000) ".stfolder/" "../" "journal/" "./" ".gitignore" "tasks/" "books/" "roam/" "roadmap/" "elfeed.org")
 
@@ -196,17 +294,9 @@
 
  ("/home/g/git/swaypatched/" (26294 55470 768569 31000) "README.es.md" "README.zh-TW.md" ".builds/" "meson.build" "../" "./" "README.hi.md" "include/" "README.hu.md" "README.dk.md" ".editorconfig" "README.md" "sway.desktop" "README.ko.md" "README.it.md" "sway/" "assets/" "completions/" "README.fr.md" "config.in" "README.ro.md" "README.uk.md" "README.ge.md" "client/" "README.cs.md" "README.ru.md" "README.tr.md" "README.nl.md" "README.pl.md" "README.pt.md" "swaymsg/" "meson_options.txt" "README.sv.md" "swaybar/" "release.sh" "README.ja.md" ".mailmap" "swaynag/" "common/" "README.de.md" "CONTRIBUTING.md" "README.no.md" "README.zh-CN.md" "LICENSE" "README.gr.md" "README.ir.md" "protocols/" "README.ar.md")
 
- ("/home/g/org/roadmap/" (26294 33462 458291 179000) "physics.org" "../" "./" "comp.org" "langs.org" "monastery.org" "todo.org" "hardware.org" "ask.org" "articles.org" "math.org")
-
- ("/home/g/.emacs.d/elpa/org-download-20220906.1929/" (26294 30176 337856 4000) "../" "./" "org-download.elc" "org-download-pkg.el" "org-download-autoloads.el" "org-download.el")
-
  ("/home/g/git/sway/include/sway/desktop/" (26294 45352 826467 327000) "../" "./" "transaction.h" "launcher.h" "idle_inhibit_v1.h")
 
- ("/home/g/org/" (26294 33462 465291 312000) ".stfolder/" "../" "journal/" "./" ".gitignore" "tasks/" "books/" "roam/" "roadmap/" "elfeed.org")
-
  ("/home/g/.local/" (26294 30267 44579 400000) "../" "./" "lib/" "state/" "share/" "bin/")
-
- ("/home/g/dotfiles/sway/" (26294 29423 561553 505000) "move_float" "../" "bar" "./" "toggle_floating" "launch" "config" "focus_parent" "floating" "colors")
 
  ("/home/g/git/lastfm-collage-generator/src/" (26265 16285 74700 423000) "../" "lastfmcollagegenerator/" "./")
 
@@ -232,15 +322,9 @@
 
  ("/home/g/.local/lib/python3.12/site-packages/lastfmcollagegenerator/" (26265 16539 160811 880000) "fonts/" "../" "__init__.py" "lastfm/" "__pycache__/" "collage.py" "constants.py" "./" "collage_generator.py")
 
- ("/home/g/.emacs.d/elpa/" (26263 3579 310288 130000) "compat-30.0.0.0/" "archives/" "s-20220902.1511/" "websocket-20230809.305/" "magit-section-20240713.1925/" "spacemacs-theme-20240715.1440/" "ht-20230703.558/" "ewal-20200305.230/" "async-20240714.709/" "../" "calfw-20180118.45/" "compat-30.0.0.0.signed" "org-journal-20240218.1645/" "elfeed-20240331.1348/" "ido-vertical-mode-20210205.436/" "org-roam-20240715.1750/" "swiper-20240520.1202/" "org-bullets-20200317.1740/" "ace-window-20220911.358/" "org-download-20220906.1929/" "which-key-20240620.2145/" "dash-20240510.1327/" "ewal-spacemacs-themes-20230505.609/" "calfw-org-20170411.220/" "ts-20220822.2313/" "ivy-20240524.1139/" "rmsbolt-20240622.1704/" "elfeed-org-20231009.1125/" "calfw-cal-20170411.220/" "emacsql-20240714.1824/" "org-roam-ui-20221105.1040/" "./" "org-super-agenda-20240630.18/" "gnupg/" "simple-httpd-20230821.1458/" "good-scroll-20211101.942/" "avy-20230420.404/")
-
  ("/home/g/code/c/sorting/" (26261 16603 125822 830000) "insertion.c" "merge" "sort.cpp" "heap.c" "../" "sort" "array_int" "merge_sort.c" "./" "heap")
 
  ("/home/g/code/c/" (26229 45896 210043 271000) "include/" "../" "sorting/" "misc/" "./" "polynomial/")
-
- ("/home/g/code/" (26186 36305 661088 610000) "kicad/" "vl/" "../" "c/" "./")
-
- ("/home/g/org/roam2/" (26263 5146 871146 247000) "20230508101457-legendre_polynomials.org" "20230509220516-de_novo_protein_synthesis_theory.org" "how_to_find_critical_points/" "20230507184728-cross_product.org" "20230428211841-semantic_priming.org" "20240524152342-merge_sort.org" "20230508205715-synaptic_plasticity.org" "Hyperboloid/" "20230428204925-negative_priming.org" "20230809072026-swedish.org" "2023-05-16_10-30-44_screenshot.png" "Length_of_parametric_equations/" "20230426133749-polar_coordinates.org" "20230429123049-polar_decomposition.org" "20230730164148-multivariable_functions.org" "Definition/" "2023-04-29_12-44-44_screenshot.png" "2023-04-27_14-50-06_screenshot.png" "20240529014641-algorithms.org" "20230507194343-equation_of_a_plane_in_3d.org" "Area_of_a_polar_equation/" "20230508084309-discrete_fourier_transform.org" "20230429102930-norm.org" "20230516101540-cylindrical_coordinates.org" "Linearity_on_calculus/" "20230427141026-pca.org" "Cones/" "20240713142658-goals.org" "20230428204510-perceptual_priming.org" "Example/" "20230426122923-algebra.org" "20230430212254-hippocampus.org" "20230529133329-basal_ganglia.org" "20230504154325-jordan_matrix.org" "Calculus_of_vector_functions/" "Examples/" "20230428102130-polar_equations.org" "Example_of_SVD/" "Linearity_of_transformations/" "2023-04-27_15-17-26_paste-6092c9483ff0ebb56a0b8c48db7b0beeb52cb967.jpg" "20230426125715-series.org" "absolute_maximum_and_minimum/" "Techniques_of_integration/" "The_Geometry_of_SVD/" "Limits_of_multivariable_functions/" "20230509221322-dna_methylation.org" "20230426123042-automata_theory.org" "2023-04-27_15-23-15_screenshot.png" "Graphing_vector_functions/" "2023-04-27_15-12-58_screenshot.png" "Properties/" "20230428145823-trapezoidal_rule.org" "2023-05-04_19-32-18_screenshot.png" "Composite_Simpson's_rule/" "20230429092659-singular_value.org" "ltximg/" "20230428204640-positive_priming.org" "20230613195236-projectile_motion.org" "2023-04-29_13-08-18_screenshot.png" "2023-05-16_21-01-19_screenshot.png" "20230430211957-long_term_potentiation.org" "20230427120341-spacing_effect.org" "Perpendicular_Least_Squares/" "20230428204206-priming.org" "20230428143710-analysis.org" "2023-05-04_19-31-42_screenshot.png" "Heaps/" "20230501084323-linear_transformation.org" "20230427154818-covariance_matrix.org" "Types_of_memory/" "2023-04-28_08-43-53_screenshot.png" "20230516201507-spherical_coordinates.org" "20230429125823-pseudoinverse.org" "20240524163457-divide_and_conquer_algorithms.org" "20230429160234-numerical_analysis.org" "20230429102657-norm_of_a_matrix.org" "20230918221631-electrodynamics.org" "20230514222409-episodic_memory.org" "Sample_Correlation_Matrix/" "2023-04-29_13-02-30_screenshot.png" "integration.org" "Limit_of_a_vector_function/" "20230508101953-orthogonal_polynomials.org" "Graph/" "20230514220621-frontal_lobe.org" "2023-04-27_20-47-59_screenshot.png" "20230426123513-linear_algebra.org" "20230427112815-svd.org" "20230606205236-tnb_frames.org" "20240715130431-heapsort.org" "2023-05-01_10-36-25_screenshot.png" "20230913222720-maxima_minima_of_functions.org" "20230917191349-lagrange_multipliers.org" "20230429153017-least_squares.org" "20230426125920-parametric_equations.org" "20230513083043-surfaces.org" "Double_Integrals/" "20230428214035-memory.org" "2023-04-26_14-20-35_screenshot.png" "spectral_norm/" "Least_squares_with_dependent_columns/" "Osculating_Circle/" "2023-05-12_19-28-40_screenshot.png" "Domain/" "2023-05-16_10-20-09_screenshot.png" "Ellipsoids/" "20230428195208-enconding.org" "Matrix_of_a_linear_transformation/" "Relations_with_surfaces/" "20230427205910-covariancea.org" "20230428152412-simpsons_rule.org" "Matrix_norm/" "Ellipse/" "Relations_with_cylinders/" "20230428143244-numerical_integration.org" "20240529014724-insertion_sort.org" "Paraboloids/" "20230522130531-gram_schmidt.org" "Arc_length_of_a_polar_equation/" "20230507192103-equation_of_line_in_3d.org" "20230514222356-semantic_memory.org" "20230430205601-amygdala.org" "2023-05-16_21-29-40_paste-996edcea5854c02b9d5103217f50f93e2cc6d015.jpg" "20230521164850-vector_functions.org" "2023-04-29_13-05-52_screenshot.png" "20230512192133-cylinders.org" "20230428204529-conceptual_priming.org" "20230529133307-cerebellum.org" "20230426123025-calculus.org" "20230508104523-chebyshev_polynomials.org" "20240524163311-recurrence.org" "20230913224932-partial_derivatives.org" "../" "./")
 )
 
 ;; ----- ido-unc-hosts-cache -----

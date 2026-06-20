@@ -2,9 +2,8 @@
 
 date=$(date +'%b %a %Y-%m-%d %T')
 space=$(df -h | awk 'NR==2 {print $5}')
-news=$(eselect news count)
 cpu=$(sensors k10temp-pci-00c3 -u | awk 'NR==4 {print $2}')
-gpu=$(sensors amdgpu-pci-2800 -u | awk 'NR==10 {print $2}')
+gpu=$(sensors amdgpu-pci-0900 -u | awk 'NR==10 {print $2}')
 scratchpad=$(swaymsg -t get_tree | jq -r '.. | select(.type?) | select(.name=="__i3_scratch").floating_nodes[] | length')
 mute=$(amixer get Master | tail -1 | awk '{print $6}')
 mem=$(free -m | grep Mem: | awk '{print $3}')
@@ -20,4 +19,4 @@ else
     scratchpad="no"
 fi
 
-echo "[$gpu $cpu] [$scratchpad] [$news] [$space] [$mem] [$vol] [$date] ¯\_(ツ)_/¯"
+echo "[GPU: $gpu CPU: $cpu] [$scratchpad] [disc: $space] [mem: $mem] [vol: $vol] [$date] ¯\_(ツ)_/¯"

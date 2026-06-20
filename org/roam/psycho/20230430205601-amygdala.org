@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       0aca85c5-b824-4046-b0a8-cedd1d69cb79
-:END:
-#+title: amygdala
-

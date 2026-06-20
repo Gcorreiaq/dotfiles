@@ -1,0 +1,6 @@
+xkb_symbols "basic" {
+	    include "ru"
+	    name[Group1] = "ru custom";
+	    key <CAPS> { [ Hyper_L ] };
+	    modifier_map Mod5 { Hyper_L };
+};	    

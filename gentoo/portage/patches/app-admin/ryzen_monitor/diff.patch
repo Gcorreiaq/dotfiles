@@ -1,0 +1,41 @@
+diff '--color=auto' -crB oo/src/ryzen_monitor.c o/src/ryzen_monitor.c
+*** oo/src/ryzen_monitor.c	2026-02-28 15:19:08.550412042 -0300
+--- o/src/ryzen_monitor.c	2026-02-28 15:34:38.835993268 -0300
+***************
+*** 418,434 ****
+          default:            sysinfo.if_ver =  0; break;
+      }
+  
+!     while(1) {
+!         if (smu_read_pm_table(&obj, pm_buf, obj.pm_table_size) != SMU_Return_OK)
+!             continue;
+  
+          fprintf(stdout, "\e[1;1H\e[2J"); //Move cursor to (1,1); Clear entire screen
+          draw_screen(&pmt, &sysinfo);
+          fprintf(stdout, "\e[?25l"); // Hide Cursor
+          fflush(stdout);
+  
+!         sleep(update_time_s);
+!     }
+  }
+  
+  void read_from_dumpfile(char *dumpfile, unsigned int version) {
+--- 418,434 ----
+          default:            sysinfo.if_ver =  0; break;
+      }
+  
+! 
+!     smu_read_pm_table(&obj, pm_buf, obj.pm_table_size);
+!     //      continue;
+  
+          fprintf(stdout, "\e[1;1H\e[2J"); //Move cursor to (1,1); Clear entire screen
+          draw_screen(&pmt, &sysinfo);
+          fprintf(stdout, "\e[?25l"); // Hide Cursor
+          fflush(stdout);
+  
+! 	//        sleep(update_time_s);
+! 
+  }
+  
+  void read_from_dumpfile(char *dumpfile, unsigned int version) {
+Only in o/src: ryzen_monitor.c~

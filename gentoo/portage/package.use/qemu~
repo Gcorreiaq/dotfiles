@@ -1,0 +1,7 @@
+net-dns/dnsmasq script ipv6
+net-libs/gnutls tools pkcs11
+
+net-misc/spice-gtk usbredir
+app-emulation/virt-manager gui policykit
+app-emulation/qemu usb usbredir udev spice sdl gtk fuse
+app-emulation/libvirt policykit udev fuse

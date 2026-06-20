@@ -1,3 +1,0 @@
-#!/bin/bash
-
-equery s '*' | awk '{print $1"\ "$4}' | sed 's/[size()]*//g' | sort -gr --key=2.1

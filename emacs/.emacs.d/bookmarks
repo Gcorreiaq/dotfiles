@@ -2,13 +2,28 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("todo.org" (filename . "~/org/roadmap/todo.org")
- (front-context-string . "* TODOs\n\n** misc") (rear-context-string)
- (position . 1) (last-modified 26294 34065 24122 125000))
-("config-sway" (filename . "~/.config/sway/config")
- (front-context-string . "# Default config") (rear-context-string)
- (position . 1) (last-modified 26170 30078 451700 236000))
-("config-emacs" (filename . "~/.emacs.d/config.org")
- (front-context-string . "*  Settings\n** G") (rear-context-string)
- (position . 1) (last-modified 26170 30066 452549 84000))
+(("org-capture-last-stored"
+ (filename . "~/org/roam/20260605202500-chemical_mechanical_polishing.org")
+ (front-context-string . "\nCMP is a proces")
+ (rear-context-string . "nical-polishing\n")
+ (position . 107)
+ (last-modified 27171 23909 684974 537000))
+("todo.org"
+ (filename . "~/org/roadmap/todo.org")
+ (front-context-string . "* TODOs\n\n** misc")
+ (rear-context-string)
+ (position . 1)
+ (last-modified 26294 34065 24122 125000))
+("config-sway"
+ (filename . "~/.config/sway/config")
+ (front-context-string . "# Default config")
+ (rear-context-string)
+ (position . 1)
+ (last-modified 26170 30078 451700 236000))
+("config-emacs"
+ (filename . "~/.emacs.d/config.org")
+ (front-context-string . "*  Settings\n** G")
+ (rear-context-string)
+ (position . 1)
+ (last-modified 26170 30066 452549 84000))
 )

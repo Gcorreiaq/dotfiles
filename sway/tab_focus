@@ -1,0 +1,31 @@
+#!/bin/bash
+
+focused="$(swaymsg -t get_tree | jq -r '.. | select(.nodes?) | select(.focused==true).id')"
+
+get_container() {
+    container="$(swaymsg -t get_tree | jq -r '.. | select(.nodes?) | select((.type=="floating_con") or (.type=="con")) | paths as $path | select(getpath($path) == '$1').id' | uniq)"
+    printf "$container"
+}
+
+if [[ $1 == "parent" ]];then
+    swaymsg focus parent
+    sway-overfocus group-rw group-dw
+    swaymsg focus child
+    exit
+fi
+
+if [[ $1 == "container" ]];then
+    container="$(get_container $focused | head -n1)"
+    swaymsg [con_id=$container] focus
+    exit
+fi
+
+if [[ $1 == "set_pin" ]];then
+    swaymsg [con_id=__focused__] mark "pinned"
+    exit
+fi
+
+if [[ $1 == "focus_pin" ]];then
+    swaymsg [con_mark="pinned"] focus
+    exit
+fi

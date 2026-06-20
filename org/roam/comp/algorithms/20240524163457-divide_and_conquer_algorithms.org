@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       a9e7d9c1-80c3-4f21-b24a-51005c7c0bf2
-:END:
-#+title: divide and conquer algorithms
-
