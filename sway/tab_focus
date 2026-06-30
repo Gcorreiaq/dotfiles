@@ -1,10 +1,8 @@
 #!/bin/bash
 
-focused="$(swaymsg -t get_tree | jq -r '.. | select(.nodes?) | select(.focused==true).id')"
-
 get_container() {
-    container="$(swaymsg -t get_tree | jq -r '.. | select(.nodes?) | select((.type=="floating_con") or (.type=="con")) | paths as $path | select(getpath($path) == '$1').id' | uniq)"
-    printf "$container"
+    container="$(swaymsg -t get_tree | jq -r '.. | select(.nodes? and .name==null) | recurse(.nodes[]) as $parent | select($parent.focused).id')"
+    printf $container
 }
 
 if [[ $1 == "parent" ]];then
@@ -15,7 +13,7 @@ if [[ $1 == "parent" ]];then
 fi
 
 if [[ $1 == "container" ]];then
-    container="$(get_container $focused | head -n1)"
+    container=$(get_container)
     swaymsg [con_id=$container] focus
     exit
 fi
@@ -27,5 +25,15 @@ fi
 
 if [[ $1 == "focus_pin" ]];then
     swaymsg [con_mark="pinned"] focus
+    exit
+fi
+
+if [[ $1 == "split_move" ]];then
+    split_move=$(get_container | tail -n1)
+    swaymsg [con_id=$split_move] mark "split_move"
+    swaymsg [con_mark="pinned"] move container mark "split_move", unmark "split_move", unmark "pinned"
+#    swaymsg unmark "pinned"
+#    swaymsg unmark "split_move"
+#    swaymsg [con_mark="pinned"] move container to mark "split_move"
     exit
 fi

@@ -21,6 +21,7 @@ for_window {
 	   [class="Anki"] floating enable
 	   [class="GoldenDict"] floating enable
 	   [class="obsidian"] floating enable
+	   [class="Vial"] floating enable
 	   #
 	   [app_id="org.telegram.desktop._9b27531ae03cace6e83ac743980ed92a"] floating enable
 	   [app_id="mpv"] fullscreen enable
@@ -137,8 +138,8 @@ bindsym $mod+mod2 mode "apps"
 
      # Focus to parent or child container
 #   bindsym $mod+z focus container
-     bindsym $mod2+e focus parent
-     bindsym $mod2+r focus child
+     bindsym $mod2+r focus parent
+     bindsym $mod2+e focus child
      bindsym $mod2+t exec ~/dotfiles/sway/tab_focus container
      
      # Change layout of container
@@ -149,9 +150,9 @@ bindsym $mod+mod2 mode "apps"
      bindsym $mod+x exec sway-overfocus group-rw group-dw
      bindsym $mod+c exec ~/dotfiles/sway/tab_focus parent
 
-     bindsym $mod2+2 exec ~/dotfiles/sway/tab_focus set_pin
-     bindsym $mod2+1 exec ~/dotfiles/sway/tab_focus focus_pin
-
+     bindsym $mod2+1 mode "pinned"
+     bindsym $mod2+2 mode "opacity"
+     
      # Toggle window to fullscreen or floating/non-floating
      bindsym $mod+a fullscreen
      bindsym $mod+r floating toggle
@@ -227,16 +228,16 @@ mode "apps" {
 }
 
 mode "chromium" {
-     bindsym a exec $launch chromium "about:home"
-     bindsym s exec $launch chromium "https://youtube.com"
+     bindsym c exec $launch chromium "about:home"
+     bindsym a exec $launch chromium "https://youtube.com"
 
      bindsym Ctrl+g mode "default"
      bindsym Escape mode "default"
 }
 
 mode "firefox" {
-     bindsym a exec swaymsg mode "default" && firefox-bin --new-window "about:home"
-     bindsym s exec swaymsg mode "default" && firefox-bin --new-window "https://youtube.com"
+     bindsym f exec swaymsg mode "default" && firefox-bin --new-window "about:home"
+     bindsym a exec swaymsg mode "default" && firefox-bin --new-window "https://youtube.com"
 
      bindsym Ctrl+g mode "default"
      bindsym Escape mode "default"
@@ -267,7 +268,25 @@ mode "hide" {
      bindsym Ctrl+g mode "default"
      bindsym Escape mode "default"
 }
-     
+
+mode "pinned" {
+     bindsym 2 exec swaymsg mode "default" && ~/dotfiles/sway/tab_focus set_pin
+     bindsym 1 exec swaymsg mode "default" && ~/dotfiles/sway/tab_focus focus_pin
+     bindsym 3 exec swaymsg mode "default" && ~/dotfiles/sway/tab_focus split_move
+
+     bindsym Ctrl+g mode "default"
+     bindsym Escape mode "default"
+}
+
+mode "opacity" {
+     bindsym 1 opacity minus 0.05
+     bindsym 2 opacity plus 0.05
+     bindsym 3 opacity 0.95
+
+     bindsym Ctrl+g mode "default"
+     bindsym Escape mode "default"
+}
+
 # Bind modes
 bindsym $mod+Escape mode "apps"
 bindsym $mod+g mode "resize"

@@ -22,7 +22,7 @@
  ("/" . "etc/")
  ("/home/g/org/books/" . "ltximg/")
  ("/home/g/.xkb/" . "symbols/")
- ("/home/g/dotfiles/" . "bspwm/")
+ ("/home/g/dotfiles/" . "sway/")
  ("/home/g/.config/" . "sway/")
  ("/home/g/git/algorithms/c/" . "quicksort/")
  ("/home/g/git/algorithms/" . "c/")
@@ -112,20 +112,22 @@
 
 ;; ----- ido-work-file-list -----
 (
- "toggle_floating"
- "floating"
  "tab_focus"
+ "floating"
+ "config"
+ "toggle_floating"
  "move_float"
  "focus_parent"
  "setkmap"
  "launch"
  "chromium_link"
  "dmenu_run"
- "dmenu"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/home/g/" (27194 34920 320421 740000) "./" ".fehbg" "hd/" "dotfiles/" ".config/" "temp-gentoo2" ".bash_history" "Downloads/" "../" ".elfeed/" ".xinitrc" ".local/" ".themes/" ".anthy/" ".ssh/" ".python_history" "keepass/" "git/" ".gitconfig" ".bashrc" "images/" ".bash_history-09875.tmp" "openssf.tar" ".bash_logout" ".dbus/" "temp-last-llvm2" ".yarn/" ".bash_history-06664.tmp" ".emacs.d/" "temp-gnuplot" ".xkb/" ".ddd/" ".pki/" "world" ".mozilla/" "temp-last-llvm" "org/" ".java/" ".bash_history-70435.tmp" "phone/" "dict/" ".npm/" ".syncserver/" ".tlauncher/" "best.openssf.org/" ".phoronix-test-suite/" "temp-chromium" ".cache/" ".minecraft/" "obsidian/" ".wget-hsts" "temp-last-llvm3" "last.py" ".bash_profile" "anki_sync/" ".mplayer/")
+
  ("/home/g/dotfiles/sway/" (27189 61834 568239 88000) "./" "bar" "../" "toggle_floating" "chromium_link" "config" "floating" "launch" "move_float" "tab_focus" "colors")
 
  ("/home/g/dotfiles/ChromiumPywal/" (27189 23775 826336 694000) "./" "../" "chromium_config" "generate-theme.sh" "Pywal/")
@@ -139,8 +141,6 @@
  ("/home/g/.emacs.d/" (27174 43596 767002 277000) "url/" "./" "../" "config.el" "ido.last" "fontpreview-mode.el" "nov-places" "tutorial/" "bookmarks" "theme.el" "init.el" "games/" "recentf.eld" "org-roam.db" "auto-save-list/" "org-download.el" "org-roam-ui/" "eshell/" "ss.PNG" "config.org" "ss-error.PNG" "elpa/" "persist/" ".org-id-locations" "transient/" "theme.org")
 
  ("/home/g/dotfiles/emacs/.emacs.d/" (27174 43596 767002 277000) "url/" "./" "../" "config.el" "ido.last" "fontpreview-mode.el" "nov-places" "tutorial/" "bookmarks" "theme.el" "init.el" "games/" "recentf.eld" "org-roam.db" "auto-save-list/" "org-download.el" "org-roam-ui/" "eshell/" "ss.PNG" "config.org" "ss-error.PNG" "elpa/" "persist/" ".org-id-locations" "transient/" "theme.org")
-
- ("/home/g/" (27175 54749 335536 135000) "./" ".fehbg" "hd/" "dotfiles/" ".config/" "temp-gentoo2" ".bash_history" "Downloads/" "../" ".elfeed/" ".xinitrc" ".local/" ".themes/" ".anthy/" ".ssh/" ".python_history" "keepass/" "git/" ".gitconfig" ".bashrc" "images/" "openssf.tar" ".bash_logout" ".dbus/" "temp-last-llvm2" ".yarn/" ".emacs.d/" "temp-gnuplot" ".xkb/" ".ddd/" ".pki/" "world" ".mozilla/" "temp-last-llvm" "org/" ".java/" "phone/" "dict/" ".npm/" ".syncserver/" ".tlauncher/" "best.openssf.org/" ".phoronix-test-suite/" "temp-chromium" ".cache/" ".minecraft/" "obsidian/" ".wget-hsts" "temp-last-llvm3" "last.py" ".bash_profile" "anki_sync/" ".mplayer/")
 
  ("/home/g/org/" (27058 44413 275416 807000) "./" "../" "roam/" "journal/" "tasks/" ".gitignore" "books/" "elfeed.org" ".stfolder/" "roadmap/")
 
